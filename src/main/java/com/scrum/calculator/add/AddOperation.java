@@ -15,20 +15,19 @@ public class AddOperation extends Operation {
      */
     public AddOperation() {
         super();
-        super.numberOfParameters = 2;
+        super.numberOfParams = 2;
     }
 
     /**
      * Execute Add operation.
-     * @param listNumber list of values to add
      * @return result of addition
      */
     @Override
-    public final float execute(final ArrayList<Float> listNumber) {
+    public final float execute() {
         float result = 0;
 
-        for (int i = 0; i < super.numberOfParameters; i++) {
-            result += listNumber.get(i);
+        for (int i = 0; i < super.numberOfParams; i++) {
+            result += this.listNumber.get(i);
         }
 
         return result;
@@ -39,7 +38,7 @@ public class AddOperation extends Operation {
      * @return
      */
     @Override
-    public final int getNumberOfParameters() {
-        return super.getNumberOfParameters();
+    public final int getNumberOfParams() {
+        return super.getNumberOfParams();
     }
 }

@@ -11,21 +11,29 @@ public abstract class Operation {
 	/**
 	 * Number of parameters necessary to do the operation.
 	 */
-	protected int numberOfParameters;
+	protected int numberOfParams;
+
+	protected ArrayList<Float> listNumber;
+
+	protected Operation() {
+	}
 
 	/**
 	 * Method to execute operation.
-	 * @param listNumber list of values to operate.
 	 * @return result of operation.
 	 */
-	public abstract float execute(ArrayList<Float> listNumber);
+	public abstract float execute();
 
 	/**
 	 * Getter number of parameters for operation.
 	 * @return
 	 */
-	public int getNumberOfParameters(){
-		return this.numberOfParameters;
+	public int getNumberOfParams(){
+		return this.numberOfParams;
+	}
+
+	public void setListNumber(final ArrayList<Float> listNumber) {
+		this.listNumber = listNumber;
 	}
 	
 }

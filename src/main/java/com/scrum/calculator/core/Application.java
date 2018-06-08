@@ -56,7 +56,7 @@ public class Application {
 			
 		}
 		
-		for (int i = 0; i < operation.getNumberOfParameters(); i++){
+		for (int i = 0; i < operation.getNumberOfParams(); i++){
 			
 			System.out.println("Entrez la valeur " + i);
 			listOfFloat.add(reader.nextFloat());		

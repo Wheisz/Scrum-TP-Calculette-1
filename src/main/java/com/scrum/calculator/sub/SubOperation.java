@@ -14,7 +14,7 @@ public class SubOperation extends Operation {
      */
     public SubOperation() {
         super();
-        super.numberOfParameters = 2;
+        super.numberOfParams = 2;
     }
 
     /**
@@ -34,7 +34,7 @@ public class SubOperation extends Operation {
      * @return
      */
     @Override
-    public final int getNumberOfParameters() {
-        return super.getNumberOfParameters();
+    public final int getNumberOfParams() {
+        return super.getNumberOfParams();
     }
 }
