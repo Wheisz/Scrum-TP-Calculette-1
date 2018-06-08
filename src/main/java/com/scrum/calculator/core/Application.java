@@ -28,7 +28,9 @@ public class Application {
 			
 		}
 		
-		
+		do operation.getNumberOfParameters() {
+			
+		}
 	}
 	
 }
