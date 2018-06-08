@@ -56,7 +56,7 @@ public class Application {
 			
 		}
 		
-		for (int i = 0; i < operation.getNumberOfParameters(); i++){
+		for (int i = 1; i <= operation.getNumberOfParameters(); i++){
 			
 			System.out.println("Entrez la valeur " + i);
 			listOfFloat.add(reader.nextFloat());		
@@ -64,7 +64,7 @@ public class Application {
 		
 		Float result = operation.execute(listOfFloat);
 		
-		System.out.println("Le rÃ©sultat est :" + result);
+		System.out.println("Le résultat est :" + result);
 	}
 	
 }
