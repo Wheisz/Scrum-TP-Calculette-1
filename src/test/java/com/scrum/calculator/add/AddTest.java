@@ -22,7 +22,7 @@ public class AddTest {
         listNumber.add(i);
         listNumber.add(j);
 
-        Add add = new Add();
+        AddOperation add = new AddOperation();
 
         float result = add.execute(listNumber);
         Assert.assertEquals("Add not good", 5, result, 0.0);
