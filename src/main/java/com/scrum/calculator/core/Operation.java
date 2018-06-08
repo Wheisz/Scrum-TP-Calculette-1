@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public abstract class Operation {
 
-	private int numberOfParameters;
+	protected int numberOfParameters;
 		
 	public abstract float execute(ArrayList<Float> listNumber);
 	
