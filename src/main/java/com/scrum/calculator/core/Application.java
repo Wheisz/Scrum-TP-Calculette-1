@@ -23,7 +23,7 @@ public class Application {
 	/**
 	 * Main method
 	 */
-	public static void main(){
+	public static void main(final String[] args) {
 
 		// User choice
 		System.out.println("Veuillez choisir une op�ration");
