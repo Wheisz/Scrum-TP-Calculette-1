@@ -5,6 +5,7 @@ plugins {
     id 'checkstyle'
     id 'jacoco'
     id 'jdepend'
+    id 'eclipse'
 }
 
 group 'm2i-m2'
