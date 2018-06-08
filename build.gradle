@@ -1,0 +1,118 @@
+plugins {
+    id 'java'
+    id 'pmd'
+    id 'findbugs'
+    id 'checkstyle'
+    id 'jacoco'
+    id 'jdepend'
+}
+
+group 'm2i-m2'
+version '1.0-SNAPSHOT'
+
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile group: 'joda-time', name: 'joda-time', version: '2.10'
+}
+
+def reportDir="${project.buildDir}/reports"
+
+check.dependsOn 'cpd'
+
+// PMD
+pmd{
+    pmdTest.enabled = false
+    ignoreFailures = true
+    ruleSets = ["java-basic", "java-braces", "java-clone", "java-codesize",
+                "java-comments", "java-controversial", "java-coupling",
+                "java-design", "java-empty", "java-finalizers", "java-imports",
+                "java-naming", "java-optimizations", "java-strings",
+                "java-unusedcode"]
+}
+tasks.withType(Pmd){
+    reports {
+        xml.enabled true
+        html.enabled true
+    }
+}
+
+// Findbugs
+findbugs {
+    findbugsTest.enabled = false
+    ignoreFailures = true
+    effort = "max"
+    showProgress = true
+    reportLevel = "high"
+    visitors = ["FindSqlInjection", "SwitchFallthrough"]
+    omitVisitors = ["FindNonShortCircuit"]
+}
+tasks.withType(FindBugs) {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+// Checkstyle
+checkstyle{
+    checkstyleTest.enabled = false
+    ignoreFailures = true
+    showViolations = true
+    configFile file("${project.rootDir}/config/checkstyle/sun_checks.xml")
+}
+tasks.withType(Checkstyle) {
+    reports {
+        xml.enabled true
+        html.enabled false
+    }
+}
+
+// CPD
+task cpd {
+    doLast {
+        def cpdOutputDir = new File("${reportDir}/cpd")
+        cpdOutputDir.mkdirs()
+
+        ant.taskdef(name: 'cpd', classname: 'net.sourceforge.pmd.cpd.CPDTask', classpath: configurations.pmd.asPath)
+
+        ant.cpd(minimumTokenCount: '25', format: 'xml', outputFile: new File(cpdOutputDir, 'cpdCheck.xml')) {
+            fileset(dir: 'src') {
+                include(name: '**/*.java')
+            }
+        }
+    }
+}
+
+// JACOCO
+jacoco {
+    toolVersion = "0.8.1"
+}
+tasks.withType(JacocoReport) {
+    reports {
+        xml.enabled true
+        html.enabled true
+        csv.enabled true
+    }
+}
+
+// JDEPEND
+jdepend {
+    jdependTest.enabled = false
+    ignoreFailures = true
+}
+tasks.withType(JDepend) {
+    reports {
+        xml.enabled true
+        text.enabled false
+    }
+}
+
+test{
+    ignoreFailures = true
+}
