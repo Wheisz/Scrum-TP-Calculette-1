@@ -6,7 +6,7 @@ public abstract class Operation {
 
 	private int numberOfParameters;
 		
-	abstract float execute(ArrayList<Float> listNumber);
+	public abstract float execute(ArrayList<Float> listNumber);
 	
 	public int getNumberOfParameters(){
 		return this.numberOfParameters;
