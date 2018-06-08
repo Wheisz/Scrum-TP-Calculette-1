@@ -8,12 +8,13 @@ import java.util.ArrayList;
  * Addition.
  * @author tsupio
  */
-public class Add extends Operation {
+public class AddOperation extends Operation {
 
     /**
      * Constructor.
      */
-    public Add(){
+    public AddOperation(){
+        super();
         super.numberOfParameters = 2;
     }
 
