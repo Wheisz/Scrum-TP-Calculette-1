@@ -20,9 +20,15 @@ public class Application {
 		case 1: 
 			operation = (IOperation) new Addition();
 			break;		
+		
+			
+		case 2:
+			operation = (IOperation) new Substraction();
+			break;
+			
 		}
-			
-			
+		
+		
 	}
 	
 }
