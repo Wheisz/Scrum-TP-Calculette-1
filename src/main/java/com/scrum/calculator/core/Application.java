@@ -5,10 +5,10 @@
  * ***************************************************************************/
 package com.scrum.calculator.core;
 
+import com.scrum.calculator.add.AddOperation;
+
 import java.util.ArrayList;
 import java.util.Scanner;
-
-import com.scrum.calculator.add.Add;
 
 /**
  * Main application of the calculator
@@ -46,7 +46,7 @@ public class Application {
 		
 		switch(operationNumber){
 		case 1: 
-			operation = (Operation) new Add();
+			operation = (Operation) new AddOperation();
 			break;		
 		
 			
