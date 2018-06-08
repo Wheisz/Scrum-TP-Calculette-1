@@ -8,6 +8,8 @@ package com.scrum.calculator.core;
 import java.util.ArrayList;
 import java.util.Scanner;
 
+import com.scrum.calculator.add.Add;
+
 /**
  * Main application of the calculator
  * @author Willy
@@ -44,12 +46,12 @@ public class Application {
 		
 		switch(operationNumber){
 		case 1: 
-			operation = (IOperation) new Addition();
+			operation = (Operation) new Add();
 			break;		
 		
 			
 		case 2:
-			operation = (IOperation) new Substraction();
+			//operation = (IOperation) new Substraction();
 			break;
 			
 		}
