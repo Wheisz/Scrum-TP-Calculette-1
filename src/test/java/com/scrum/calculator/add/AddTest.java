@@ -21,11 +21,11 @@ public class AddTest {
         ArrayList<Float> listNumber = new ArrayList<Float>();
         listNumber.add(i);
         listNumber.add(j);
-        int result;
+
         Add add = new Add();
 
-     //   result = add.execute(listNumber)
-    //    Assert.assertEquals("Add not good !", result, 5);
+        float result = add.execute(listNumber);
+        Assert.assertEquals("Add not good", 5, result, 0.0);
     }
 
     @After
