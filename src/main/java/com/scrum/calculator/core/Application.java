@@ -14,7 +14,7 @@ public class Application {
 	
 	private void doOperation(int operationNumber){
 		
-		IOperation operation = null;
+		Operation operation = null;
 		
 		switch(operationNumber){
 		case 1: 
