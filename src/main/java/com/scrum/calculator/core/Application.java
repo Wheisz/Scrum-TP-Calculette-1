@@ -61,8 +61,9 @@ public class Application {
 			System.out.println("Entrez la valeur " + i);
 			listOfFloat.add(reader.nextFloat());		
 		}
-		
-		Float result = operation.execute(listOfFloat);
+
+		operation.setListNumber(listOfFloat);
+		Float result = operation.execute();
 		
 		System.out.println("Le résultat est :" + result);
 	}

@@ -19,13 +19,12 @@ public class SubOperation extends Operation {
 
     /**
      * Execute Sub operation.
-     * @param listNumber list of values to subtract
      * @return result of addition
      */
     @Override
-    public final float execute(final ArrayList<Float> listNumber) {
+    public final float execute() {
         float result = listNumber.get(0);
-        result -= listNumber.get(1);
+        result -= this.listNumber.get(1);
         return result;
     }
 
