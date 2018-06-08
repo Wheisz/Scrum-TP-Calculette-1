@@ -23,10 +23,10 @@ public class Application {
 	/**
 	 * Main method
 	 */
-	public static void main(){
+	public static void main(final String[] args) {
 
 		// User choice
-		System.out.println("Veuillez choisir une opération");
+		System.out.println("Veuillez choisir une opï¿½ration");
 		System.out.println("1 - Addition");
 		System.out.println("2 - Soustraction");
 		System.out.println("3 -  Mutliplication");
@@ -64,7 +64,7 @@ public class Application {
 		
 		Float result = operation.execute(listOfFloat);
 		
-		System.out.println("Le résultat est :" + result);
+		System.out.println("Le rÃ©sultat est :" + result);
 	}
 	
 }
