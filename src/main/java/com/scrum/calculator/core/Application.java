@@ -1,34 +1,70 @@
+/****************************************************************************
+ * Calculator application.
+ *
+ * 
+ * ***************************************************************************/
 package com.scrum.calculator.core;
 
+import com.scrum.calculator.add.AddOperation;
+
+import java.util.ArrayList;
+import java.util.Scanner;
+
+/**
+ * Main application of the calculator
+ * @author Willy
+ *
+ */
 public class Application {
 	
-	public static void main(){
+	// Reader to the user
+	private static Scanner reader = new Scanner(System.in);
+		
+	/**
+	 * Main method
+	 */
+	public static void main(final String[] args) {
 
-		System.out.println("Veuillez choisir une opération");
+		// User choice
+		System.out.println("Veuillez choisir une opï¿½ration");
 		System.out.println("1 - Addition");
 		System.out.println("2 - Soustraction");
 		System.out.println("3 -  Mutliplication");
 		
-		
+		doOperation(reader.nextInt());
 	}
 	
-	private void doOperation(int operationNumber){
+	/**
+	 * Do the operation
+	 * @param operationNumber id of operation
+	 */
+	private static void doOperation(int operationNumber){
 		
-		IOperation operation = null;
+		Operation operation = null;
+		ArrayList<Float> listOfFloat = new ArrayList<Float>();
+		
 		
 		switch(operationNumber){
 		case 1: 
-			operation = (IOperation) new Addition();
+			operation = (Operation) new AddOperation();
 			break;		
 		
 			
 		case 2:
-			operation = (IOperation) new Substraction();
+			//operation = (IOperation) new Substraction();
 			break;
 			
 		}
 		
+		for (int i = 0; i < operation.getNumberOfParameters(); i++){
+			
+			System.out.println("Entrez la valeur " + i);
+			listOfFloat.add(reader.nextFloat());		
+		}
 		
+		Float result = operation.execute(listOfFloat);
+		
+		System.out.println("Le rÃ©sultat est :" + result);
 	}
 	
 }
