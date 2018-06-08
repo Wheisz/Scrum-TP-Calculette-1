@@ -4,11 +4,11 @@ import java.util.ArrayList;
 
 public abstract class Operation {
 
-	private float numberOfParameters;
+	private int numberOfParameters;
 		
 	abstract float execute(ArrayList<Float> listNumber);
 	
-	public float getNumberOfParameters(){
+	public int getNumberOfParameters(){
 		return this.numberOfParameters;
 	}
 	
