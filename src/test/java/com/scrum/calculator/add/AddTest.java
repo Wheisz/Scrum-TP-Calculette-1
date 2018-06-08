@@ -11,7 +11,7 @@ public class AddTest {
     @Before
     // S'exécute AVANT chaque test
     public void setup(){
-        System.out.println("Before test");
+        System.out.println("Start AddTest");
     }
 
     @Test
@@ -31,6 +31,6 @@ public class AddTest {
     @After
     // S'exécute APRES chaque test
     public void teardown(){
-        System.out.println("After test");
+        System.out.println("End AddTest");
     }
 }
