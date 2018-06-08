@@ -13,7 +13,7 @@ public class AddOperation extends Operation {
     /**
      * Constructor.
      */
-    public AddOperation(){
+    public AddOperation() {
         super();
         super.numberOfParameters = 2;
     }
@@ -24,10 +24,10 @@ public class AddOperation extends Operation {
      * @return result of addition
      */
     @Override
-    public float execute(final ArrayList<Float> listNumber) {
+    public final float execute(final ArrayList<Float> listNumber) {
         float result = 0;
 
-        for (int i = 0; i < super.numberOfParameters; i++){
+        for (int i = 0; i < super.numberOfParameters; i++) {
             result += listNumber.get(i);
         }
 
@@ -39,7 +39,7 @@ public class AddOperation extends Operation {
      * @return
      */
     @Override
-    public int getNumberOfParameters() {
+    public final int getNumberOfParameters() {
         return super.getNumberOfParameters();
     }
 }
