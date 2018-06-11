@@ -57,9 +57,9 @@ public final class Application {
             UserInterface.displayMessage("3 - Mutliplication");
             UserInterface.displayMessage("4 - Division");
             UserInterface.displayMessage("9 - Quitter");
-                        
+
             userChoice = UserInterface.getIntFromUser();         
-            
+
             if (userChoice != 9 )
                 doOperation(userChoice);    
         }
@@ -110,9 +110,20 @@ public final class Application {
             }
 
             operation.setListNumber(listOfFloat);
-            final Float result = operation.execute();
 
-            UserInterface.displayMessage("Le résultat est : " + result );            
+            Float result = (float) 0;
+
+            try {
+                result = operation.execute();
+                UserInterface.displayMessage("Le résultat est : " + result );       
+            }
+            catch (ArithmeticException e) {
+                System.out.println(e.getMessage());
+                doOperation(operationNumber);
+            }            
+
+
+                 
         }
 
 
