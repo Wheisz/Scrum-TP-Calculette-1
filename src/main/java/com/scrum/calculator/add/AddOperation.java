@@ -29,7 +29,6 @@ public class AddOperation extends AbstractOperation {
      */
     public AddOperation() {
         super();
-        super.setNumberOfParams(2);
     }
 
     /**

@@ -29,7 +29,6 @@ public class MultiplyOperation extends AbstractOperation {
      */
     public MultiplyOperation() {
         super();
-        super.setNumberOfParams(2);
     }
 
     /**
