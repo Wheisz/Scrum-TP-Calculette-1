@@ -16,7 +16,7 @@
 
 package com.scrum.calculator.multiply;
 
-import com.scrum.calculator.core.AbstractOperation;;
+import com.scrum.calculator.core.AbstractOperation;
 
 /**
  * Class Multiply.
@@ -37,7 +37,7 @@ public class MultiplyOperation extends AbstractOperation {
      * @return result of multiplication
      */
     @Override
-    public final float execute() {
+    public final float execute() throws ArithmeticException {
         float result;
         result = this.getListNumber().get(0) * this.getListNumber().get(1);
         return result;

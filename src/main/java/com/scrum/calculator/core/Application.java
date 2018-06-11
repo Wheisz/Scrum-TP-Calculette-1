@@ -45,16 +45,26 @@ public final class Application {
      * Main method.
      * @param args String table.
      */
-    public static void main(final String[] args) {
+    public static void main(final String[] args) { 
 
-        // User choice
-        UserInterface.displayMessage("Veuillez choisir une opération");
-        UserInterface.displayMessage("1 - Addition");
-        UserInterface.displayMessage("2 - Soustraction");
-        UserInterface.displayMessage("3 - Mutliplication");
-        UserInterface.displayMessage("4 - Division");
+        int userChoice = 0;
 
-        doOperation(UserInterface.getIntFromUser());
+        while (userChoice != 9) {
+            // User choice
+            UserInterface.displayMessage("Veuillez choisir une opération");
+            UserInterface.displayMessage("1 - Addition");
+            UserInterface.displayMessage("2 - Soustraction");
+            UserInterface.displayMessage("3 - Mutliplication");
+            UserInterface.displayMessage("4 - Division");
+            UserInterface.displayMessage("9 - Quitter");
+                        
+            userChoice = UserInterface.getIntFromUser();         
+            
+            if (userChoice != 9 )
+                doOperation(userChoice);    
+        }
+
+        UserInterface.displayMessage("Exécution terminée.");
     }
 
     /**
@@ -83,7 +93,7 @@ public final class Application {
             operation = (AbstractOperation) new DivideOperation();
             break;
 
-            
+
         default:
             System.out.println("Cette opération n'existe pas.");
             operation = null;
@@ -102,7 +112,7 @@ public final class Application {
             operation.setListNumber(listOfFloat);
             final Float result = operation.execute();
 
-            UserInterface.displayMessage("Le résultat est : " + result);
+            UserInterface.displayMessage("Le résultat est : " + result );            
         }
 
 

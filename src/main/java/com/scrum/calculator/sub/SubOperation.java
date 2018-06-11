@@ -36,7 +36,7 @@ public class SubOperation extends AbstractOperation {
      * @return result of addition
      */
     @Override
-    public final float execute() {
+    public final float execute() throws ArithmeticException {
         float result = this.getListNumber().get(0);
         result -= this.getListNumber().get(1);
         return result;

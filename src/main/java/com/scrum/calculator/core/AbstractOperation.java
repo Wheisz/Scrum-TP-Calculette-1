@@ -16,7 +16,7 @@ public abstract class AbstractOperation {
     /**
      * List of numbers to operate.
      */
-    private List<Float> listNumber;
+    protected List<Float> listNumber;
 
     /**
      * Constructor.
@@ -27,9 +27,10 @@ public abstract class AbstractOperation {
 
     /**
      * Method to execute operation.
-     * @return result of operation.
+     * @return result of operation
+     * @throws ArithmeticException
      */
-    public abstract float execute();
+    public abstract float execute() throws ArithmeticException;
 
     /**
      * Getter number of parameters for operation.
