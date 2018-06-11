@@ -83,4 +83,10 @@ public abstract class AbstractOperation {
     protected final void setResult(float result) {
         this.result = result;
     }
+
+    /**
+     * Method to get the string of the operation.
+     * @return string of operation
+     */
+    public abstract String toStringOperation();
 }

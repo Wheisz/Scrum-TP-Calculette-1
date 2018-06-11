@@ -50,7 +50,7 @@ public class AddOperation extends AbstractOperation {
      * @return string of an addition
      */
     @Override
-    public String toString() {
+    public String toStringOperation() {
         return this.getListNumber().get(0) + " + " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

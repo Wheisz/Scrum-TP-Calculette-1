@@ -45,7 +45,7 @@ public class SubOperation extends AbstractOperation {
      * @return string of a subtraction
      */
     @Override
-    public String toString() {
+    public String toStringOperation() {
         return this.getListNumber().get(0) + " - " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

@@ -36,6 +36,9 @@ import java.util.ArrayList;
  */
 public final class Application {
 
+    /**
+     * Invoker of operations.
+     */
     private static InvokeOperation operations = new InvokeOperation();
 
     /**
@@ -47,11 +50,12 @@ public final class Application {
      * Main method.
      * @param args String table.
      */
-    public static void main(final String[] args) { 
+    public static void main(final String[] args) {
 
         int userChoice = 0;
+        int leaveNumber = 9;
 
-        while (userChoice != 9) {
+        while (userChoice != leaveNumber) {
             // User choice
             UserInterface.displayMessage("Veuillez choisir une op�ration");
             UserInterface.displayMessage("1 - Addition");
@@ -63,7 +67,7 @@ public final class Application {
 
             userChoice = UserInterface.getIntFromUser();         
 
-            if (userChoice != 9 )
+            if ( userChoice != leaveNumber )
                 doOperation(userChoice);    
         }
 
@@ -123,7 +127,8 @@ public final class Application {
 
             try {
                 operations.storeAndExecute(operation);
-                UserInterface.displayMessage("Le r�sultat est : " + operation.getResult());
+                UserInterface.displayMessage(
+                        "Le r�sultat est : " + operation.getResult());
             }
             catch (ArithmeticException e) {
                 System.out.println(e.getMessage());

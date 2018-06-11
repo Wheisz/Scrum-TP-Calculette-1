@@ -40,7 +40,7 @@ public class InvokeOperation {
      * Store the operation in history then execute it.
      * @param operation Operation to store and execute
      */
-    public void storeAndExecute(AbstractOperation operation) {
+    public final void storeAndExecute(final AbstractOperation operation) {
         this.history.add(operation);
         operation.execute();
     }
@@ -49,7 +49,7 @@ public class InvokeOperation {
      * Getter history property.
      * @return history of operations
      */
-    public ArrayList<AbstractOperation> getHistory() {
+    public final ArrayList<AbstractOperation> getHistory() {
         return this.history;
     }
 
@@ -57,7 +57,7 @@ public class InvokeOperation {
      * String of the history of operations
      * @return the string for an history
      */
-    public String toStringHistory() {
+    public final String toStringHistory() {
         String result = "";
         for (int i = 0; i < this.history.size(); i++) {
             result += "Opération n° " + i + this.history.get(i).toString()
