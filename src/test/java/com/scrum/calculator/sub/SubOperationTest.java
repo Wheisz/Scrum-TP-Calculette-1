@@ -26,7 +26,7 @@ public class SubOperationTest {
     }
 
     @Test
-    public void testSubOperation(){
+    public void testExecute(){
         float i = 2;
         float j = 3;
         ArrayList<Float> listNumber = new ArrayList<Float>();

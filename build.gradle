@@ -40,11 +40,7 @@ check.dependsOn 'cpd'
 pmd{
     pmdTest.enabled = false
     ignoreFailures = true
-    ruleSets = ["java-basic", "java-braces", "java-clone", "java-codesize",
-                "java-comments", "java-controversial", "java-coupling",
-                "java-design", "java-empty", "java-finalizers", "java-imports",
-                "java-naming", "java-optimizations", "java-strings",
-                "java-unusedcode"]
+    ruleSetFiles file("${project.rootDir}/config/pmd/pmd_rules_lvl1.xml")
 }
 tasks.withType(Pmd){
     reports {
