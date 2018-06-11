@@ -24,6 +24,9 @@ package com.scrum.calculator.core;
 import com.scrum.calculator.add.AddOperation;
 import com.scrum.calculator.divide.DivideOperation;
 import com.scrum.calculator.multiply.MultiplyOperation;
+import com.scrum.calculator.scient.CosOperation;
+import com.scrum.calculator.scient.SinOperation;
+import com.scrum.calculator.scient.TanOperation;
 import com.scrum.calculator.sub.SubOperation;
 import com.scrum.calculator.ui.UserInterface;
 
@@ -58,6 +61,18 @@ public final class Application {
      */
     private static final int DIVIDENUMBER = 4;
     /**
+     * Value for cosinus operation.
+     */
+    private static final int COSNUMBER = 5;
+    /**
+     * Value for sinus operation.
+     */
+    private static final int SINNUMBER = 6;
+    /**
+     * Value for tan operation.
+     */
+    private static final int TANNUMBER = 7;
+    /**
      * Value for history.
      */
     private static final int HISTORYNUMBER = 8;
@@ -87,17 +102,11 @@ public final class Application {
             UserInterface.displayMessage(SUBNUMBER + " - Soustraction");
             UserInterface.displayMessage(MULTIPLYNUMBER + " - Mutliplication");
             UserInterface.displayMessage(DIVIDENUMBER + " - Division");
+            UserInterface.displayMessage(COSNUMBER + " - Cosinus");
+            UserInterface.displayMessage(SINNUMBER + " - Sinus");
+            UserInterface.displayMessage(TANNUMBER + " - Tangente");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
-            UserInterface.displayMessage("1 - Addition");
-            UserInterface.displayMessage("2 - Soustraction");
-            UserInterface.displayMessage("3 - Mutliplication");
-            UserInterface.displayMessage("4 - Division");
-            UserInterface.displayMessage("5 - Cosinus");
-            UserInterface.displayMessage("6 - Sinus");
-            UserInterface.displayMessage("7 - Tangente");
-            UserInterface.displayMessage("8 - Historique");
-            UserInterface.displayMessage("9 - Quitter");
 
             userChoice = UserInterface.getIntFromUser();         
 
@@ -165,7 +174,7 @@ public final class Application {
         }
 
         if (operation != null) {
-            final ArrayList<Float> listOfFloat = new ArrayList<Float>();
+            final ArrayList<Float> listOfFloat = new ArrayList<>();
 
             for (int i = 1; i <= operation.getNumberOfParams(); i++) {
 
