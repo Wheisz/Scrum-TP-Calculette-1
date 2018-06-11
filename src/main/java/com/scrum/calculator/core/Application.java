@@ -157,17 +157,17 @@ public final class Application {
             break;
 
         // Cosinus
-        case 5:
+        case COSNUMBER:
             operation = new CosOperation();
             break;
 
         // Sinus
-        case 6:
+        case SINNUMBER:
             operation = new SinOperation();
             break;
 
         // Tangente
-        case 7:
+        case TANNUMBER:
             operation = new TanOperation();
             break;
 
@@ -177,7 +177,7 @@ public final class Application {
             break;
 
         default:
-            UserInterface.displayMessage("Cette opération n'existe pas.");
+            UserInterface.displayMessage("Cette opï¿½ration n'existe pas.");
             operation = null;
             break;
         }
@@ -196,7 +196,7 @@ public final class Application {
             try {
                 operations.storeAndExecute(operation);
                 UserInterface.displayMessage(
-                        "Le résultat est : " + operation.getResult());
+                        "Le rï¿½sultat est : " + operation.getResult());
             } catch (ArithmeticException e) {
                 UserInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
