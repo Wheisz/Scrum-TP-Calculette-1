@@ -38,9 +38,9 @@ public class DivideOperation extends Operation {
     @Override
     public final float execute() {
         float result;
-        if(listNumber.get(1) == 0) {
-            throw new ArithmeticException("Division by zero is impossible. " +
-                    "Please change second value");
+        if (listNumber.get(1) == 0) {
+            throw new ArithmeticException("Division by zero is impossible. "
+                    + "Please change second value");
 
         }
         result = listNumber.get(0) / listNumber.get(1);
