@@ -13,18 +13,21 @@ public class TanOperation extends AbstractOperation {
 
     /**
      * Execute Tan operation.
-     * @return result of tan
      */
     @Override
     public final void execute() throws ArithmeticException{
         double result = Math.sin(Math.toRadians(
               this.getListNumber().get(0)));
-        this.setResult(Math.round(result * 100) / 100);
+        this.setResult((float) (Math.round(result*100.0)/100.0));
     }
-    
+
+    /**
+     * ToString of tang operation.
+     * @return string of a tang operation
+     */
     @Override
-    public String toString() {
-    	return "Tan("+this.getListNumber().get(0) + ")"
+    public final String toStringOperation() {
+        return " Tan(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
 }

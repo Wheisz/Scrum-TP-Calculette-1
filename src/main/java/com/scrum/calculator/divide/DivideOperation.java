@@ -23,12 +23,6 @@ import com.scrum.calculator.core.AbstractOperation;
  * @author tsupio
  */
 public class DivideOperation extends AbstractOperation {
-    /**
-     * Constructor.
-     */
-    public DivideOperation() {
-        super();
-    }
 
     /**
      * Execute divide operation.
@@ -50,7 +44,7 @@ public class DivideOperation extends AbstractOperation {
      * @return string of a division
      */
     @Override
-    public String toString() {
+    public final String toStringOperation() {
         return this.getListNumber().get(0) + " / " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

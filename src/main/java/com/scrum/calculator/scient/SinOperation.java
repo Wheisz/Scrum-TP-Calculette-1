@@ -17,18 +17,21 @@ public class SinOperation extends AbstractOperation {
 
     /**
      * Execute Sin operation.
-     * @return result of cos
      */
     @Override
     public final void execute() {
         double result = Math.sin(
         		Math.toRadians(this.getListNumber().get(0)));
-        this.setResult(Math.round(result * 100) / 100);
+        this.setResult((float) (Math.round(result*100.0)/100.0));
     }
-    
+
+    /**
+     * ToString of sinus operation.
+     * @return string of a sinus operation
+     */
     @Override
-    public String toString() {
-        return "Sin("+this.getListNumber().get(0) + ")"
+    public final String toStringOperation() {
+        return " Sin(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
 }
