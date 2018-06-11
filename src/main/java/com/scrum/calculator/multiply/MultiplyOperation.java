@@ -38,7 +38,7 @@ public class MultiplyOperation extends Operation {
      */
     @Override
     public final float execute() {
-        float result = 0;
+        float result;
         result = listNumber.get(0) * listNumber.get(1);
         return result;
     }
