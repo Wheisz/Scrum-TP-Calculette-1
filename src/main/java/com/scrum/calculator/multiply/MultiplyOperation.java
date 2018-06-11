@@ -42,13 +42,4 @@ public class MultiplyOperation extends Operation {
         result = listNumber.get(0) * listNumber.get(1);
         return result;
     }
-
-    /**
-     * Number of values to multiply.
-     * @return
-     */
-    @Override
-    public final int getNumberOfParams() {
-        return super.getNumberOfParams();
-    }
 }
