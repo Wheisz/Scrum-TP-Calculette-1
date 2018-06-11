@@ -20,10 +20,14 @@ public class TanOperation extends AbstractOperation {
         double result = Math.sin(this.getListNumber().get(0));
         this.setResult((float)result);
     }
-    
+
+    /**
+     * ToString of tang operation.
+     * @return string of a tang operation
+     */
     @Override
-    public String toString() {
-    	return "Tan("+this.getListNumber().get(0) + ")"
+    public String toStringOperation() {
+        return " Tan(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
 }

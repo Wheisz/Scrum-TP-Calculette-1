@@ -24,10 +24,14 @@ public class SinOperation extends AbstractOperation {
         double result = Math.sin(this.getListNumber().get(0));
         this.setResult((float)result);
     }
-    
+
+    /**
+     * ToString of sinus operation.
+     * @return string of a sinus operation
+     */
     @Override
-    public String toString() {
-        return "Sin("+this.getListNumber().get(0) + ")"
+    public String toStringOperation() {
+        return " Sin(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
 }

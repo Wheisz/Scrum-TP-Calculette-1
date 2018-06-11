@@ -24,10 +24,14 @@ public class CosOperation extends AbstractOperation {
         double result = Math.cos(this.getListNumber().get(0));
         this.setResult((float)result);
     }
-    
+
+    /**
+     * ToString of cosinus operation.
+     * @return string of a cosinus operation
+     */
     @Override
-    public String toString() {
-    	return "Cos("+this.getListNumber().get(0) + ")"
+    public String toStringOperation() {
+        return " Cos(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
 }
