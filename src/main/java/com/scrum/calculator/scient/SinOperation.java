@@ -16,12 +16,18 @@ public class SinOperation extends AbstractOperation {
     }
 
     /**
-     * Execute Scientific operation.
-     * @return result of sin, tan, cos
+     * Execute Sin operation.
+     * @return result of cos
      */
     @Override
     public final void execute() {
         double result = Math.sin(this.getListNumber().get(0));
-        super.result = result;
+        this.setResult((float)result);
+    }
+    
+    @Override
+    public String toString() {
+        return "Sin("+this.getListNumber().get(0) + ")"
+                + " = " + this.getResult();
     }
 }

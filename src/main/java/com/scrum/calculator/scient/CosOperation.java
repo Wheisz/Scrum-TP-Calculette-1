@@ -16,12 +16,18 @@ public class CosOperation extends AbstractOperation {
     }
 
     /**
-     * Execute Scientific operation.
-     * @return result of sin, tan, cos
+     * Execute Cos operation.
+     * @return result cos
      */
     @Override
     public final void execute() {
         double result = Math.cos(this.getListNumber().get(0));
-        super.result = result;
+        this.setResult((float)result);
+    }
+    
+    @Override
+    public String toString() {
+    	return "Cos("+this.getListNumber().get(0) + ")"
+                + " = " + this.getResult();
     }
 }

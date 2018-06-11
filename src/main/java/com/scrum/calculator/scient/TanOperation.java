@@ -12,12 +12,18 @@ public class TanOperation extends AbstractOperation {
     }
 
     /**
-     * Execute Scientific operation.
-     * @return result of sin, tan, cos
+     * Execute Tan operation.
+     * @return result of tan
      */
     @Override
     public final void execute() {
         double result = Math.sin(this.getListNumber().get(0));
-        super.result = result;
+        this.setResult((float)result);
+    }
+    
+    @Override
+    public String toString() {
+    	return "Tan("+this.getListNumber().get(0) + ")"
+                + " = " + this.getResult();
     }
 }
