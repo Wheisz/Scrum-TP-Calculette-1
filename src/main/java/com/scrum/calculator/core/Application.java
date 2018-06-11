@@ -22,6 +22,8 @@
 package com.scrum.calculator.core;
 
 import com.scrum.calculator.add.AddOperation;
+import com.scrum.calculator.divide.DivideOperation;
+import com.scrum.calculator.multiply.MultiplyOperation;
 import com.scrum.calculator.sub.SubOperation;
 import com.scrum.calculator.ui.UserInterface;
 
@@ -50,6 +52,7 @@ public final class Application {
         UserInterface.displayMessage("1 - Addition");
         UserInterface.displayMessage("2 - Soustraction");
         UserInterface.displayMessage("3 - Mutliplication");
+        UserInterface.displayMessage("4 - Division");
 
         doOperation(UserInterface.getIntFromUser());
     }
@@ -72,6 +75,15 @@ public final class Application {
             operation = (AbstractOperation) new SubOperation();
             break;
 
+        case 3:
+            operation = (AbstractOperation) new MultiplyOperation();
+            break;
+
+        case 4:
+            operation = (AbstractOperation) new DivideOperation();
+            break;
+
+            
         default:
             System.out.println("Cette opération n'existe pas.");
             operation = null;

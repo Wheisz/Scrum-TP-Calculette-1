@@ -16,20 +16,20 @@
 
 package com.scrum.calculator.multiply;
 
-import com.scrum.calculator.core.Operation;
+import com.scrum.calculator.core.AbstractOperation;;
 
 /**
  * Class Multiply.
  * @author tsupio
  */
-public class MultiplyOperation extends Operation {
+public class MultiplyOperation extends AbstractOperation {
 
     /**
      * Constructor.
      */
     public MultiplyOperation() {
         super();
-        super.numberOfParams = 2;
+        super.setNumberOfParams(2);
     }
 
     /**
@@ -39,7 +39,7 @@ public class MultiplyOperation extends Operation {
     @Override
     public final float execute() {
         float result;
-        result = listNumber.get(0) * listNumber.get(1);
+        result = this.getListNumber().get(0) * this.getListNumber().get(1);
         return result;
     }
 }

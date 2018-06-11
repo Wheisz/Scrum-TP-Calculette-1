@@ -16,19 +16,19 @@
 
 package com.scrum.calculator.divide;
 
-import com.scrum.calculator.core.Operation;
+import com.scrum.calculator.core.AbstractOperation;;
 
 /**
  * Class Divide operation.
  * @author tsupio
  */
-public class DivideOperation extends Operation {
+public class DivideOperation extends AbstractOperation {
     /**
      * Constructor.
      */
     public DivideOperation() {
         super();
-        super.numberOfParams = 2;
+        super.setNumberOfParams(2);
     }
 
     /**
@@ -38,12 +38,12 @@ public class DivideOperation extends Operation {
     @Override
     public final float execute() {
         float result;
-        if (listNumber.get(1) == 0) {
+        if (this.getListNumber().get(1) == 0) {
             throw new ArithmeticException("Division by zero is impossible. "
                     + "Please change second value");
 
         }
-        result = listNumber.get(0) / listNumber.get(1);
+        result = getListNumber().get(0) / getListNumber().get(1);
         return result;
     }
 }
