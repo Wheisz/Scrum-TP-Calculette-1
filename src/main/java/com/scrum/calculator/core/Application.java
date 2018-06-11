@@ -29,6 +29,9 @@ import com.scrum.calculator.scient.SinOperation;
 import com.scrum.calculator.scient.TanOperation;
 import com.scrum.calculator.sub.SubOperation;
 import com.scrum.calculator.ui.UserInterface;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+import org.apache.logging.log4j.spi.LoggerContextFactory;
 
 import java.util.ArrayList;
 
@@ -38,6 +41,8 @@ import java.util.ArrayList;
  *
  */
 public final class Application {
+
+    private static final Logger LOGGER = LogManager.getLogger();
 
     /**
      * Invoker of operations.
@@ -92,6 +97,8 @@ public final class Application {
      */
     public static void main(final String[] args) {
 
+        LOGGER.info("Application started");
+
         int userChoice = 0;
         final int LEAVE_NUMBER = 9;
 
@@ -115,7 +122,7 @@ public final class Application {
             }
         }
 
-        UserInterface.displayMessage("Ex�cution termin�e.");
+        LOGGER.info("Application finished");
     }
 
     /**
