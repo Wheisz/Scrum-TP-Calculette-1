@@ -31,7 +31,6 @@ import com.scrum.calculator.sub.SubOperation;
 import com.scrum.calculator.ui.UserInterface;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import org.apache.logging.log4j.spi.LoggerContextFactory;
 
 import java.util.ArrayList;
 
@@ -42,6 +41,9 @@ import java.util.ArrayList;
  */
 public final class Application {
 
+    /**
+     * Logger for Application class.
+     */
     private static final Logger LOGGER = LogManager.getLogger();
 
     /**
