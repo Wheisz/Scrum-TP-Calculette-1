@@ -6,6 +6,7 @@
 package com.scrum.calculator.core;
 
 import com.scrum.calculator.add.AddOperation;
+import com.scrum.calculator.ui.UserInterface;
 
 import java.util.ArrayList;
 import java.util.Scanner;
@@ -16,56 +17,53 @@ import java.util.Scanner;
  *
  */
 public class Application {
-	
-	// Reader to the user
-	private static Scanner reader = new Scanner(System.in);
-		
+
 	/**
 	 * Main method
 	 */
 	public static void main(final String[] args) {
 
 		// User choice
-		System.out.println("Veuillez choisir une opï¿½ration");
-		System.out.println("1 - Addition");
-		System.out.println("2 - Soustraction");
-		System.out.println("3 -  Mutliplication");
-		
-		doOperation(reader.nextInt());
+		UserInterface.displayMessage("Veuillez choisir une opération");
+		UserInterface.displayMessage("1 - Addition");
+		UserInterface.displayMessage("2 - Soustraction");
+		UserInterface.displayMessage("3 - Mutliplication");
+
+		doOperation(UserInterface.getIntFromUser());
 	}
-	
+
 	/**
 	 * Do the operation
 	 * @param operationNumber id of operation
 	 */
 	private static void doOperation(int operationNumber){
-		
+
 		Operation operation = null;
 		ArrayList<Float> listOfFloat = new ArrayList<Float>();
-		
-		
+
+
 		switch(operationNumber){
 		case 1: 
 			operation = (Operation) new AddOperation();
 			break;		
-		
-			
+
+
 		case 2:
 			//operation = (IOperation) new Substraction();
 			break;
-			
-		}
-		
-		for (int i = 0; i < operation.getNumberOfParams(); i++){
-			
-			System.out.println("Entrez la valeur " + i);
-			listOfFloat.add(reader.nextFloat());		
-		}
 
-		operation.setListNumber(listOfFloat);
-		Float result = operation.execute();
-		
-		System.out.println("Le rÃ©sultat est :" + result);
+		}
+		for (int i = 1; i <= operation.getNumberOfParams(); i++){
+
+			UserInterface.displayMessage("Entrez la valeur :" + i);
+			listOfFloat.add(UserInterface.getFloatFromUser());		
+
+			operation.setListNumber(listOfFloat);
+			Float result = operation.execute();
+
+			UserInterface.displayMessage("Le résultat est : " + result);		
+
+
+		}
 	}
-	
 }

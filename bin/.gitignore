@@ -1,1 +1,9 @@
+.gradle
+build/
+doc/
+.idea/
+out/
+.classpath
+.project
 /main/
+/test/
