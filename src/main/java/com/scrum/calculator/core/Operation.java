@@ -13,8 +13,14 @@ public abstract class Operation {
 	 */
 	protected int numberOfParams;
 
+	/**
+	 * List of numbers to operate.
+	 */
 	protected ArrayList<Float> listNumber;
 
+	/**
+	 * Constructor.
+	 */
 	protected Operation() {
 	}
 
@@ -32,6 +38,10 @@ public abstract class Operation {
 		return this.numberOfParams;
 	}
 
+	/**
+	 * Setter of the list of number to operate
+	 * @param listNumber
+	 */
 	public void setListNumber(final ArrayList<Float> listNumber) {
 		this.listNumber = listNumber;
 	}
