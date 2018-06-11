@@ -6,12 +6,6 @@
  *  You may obtain a copy of the License at
  *
  *      http://www.apache.org/licenses/LICENSE-2.0
- *
- *  Unless required by applicable law or agreed to in writing, software
- *  distributed under the License is distributed on an "AS IS" BASIS,
- *  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
- *  See the License for the specific language governing permissions and
- * limitations under the License.
  */
 
 /****************************************************************************
@@ -41,7 +35,7 @@ public class Application {
 	public static void main(final String[] args) {
 
 		// User choice
-		UserInterface.displayMessage("Veuillez choisir une opération");
+		UserInterface.displayMessage("Veuillez choisir une opï¿½ration");
 		UserInterface.displayMessage("1 - Addition");
 		UserInterface.displayMessage("2 - Soustraction");
 		UserInterface.displayMessage("3 - Mutliplication");
@@ -79,7 +73,7 @@ public class Application {
 		operation.setListNumber(listOfFloat);
 		Float result = operation.execute();
 
-		UserInterface.displayMessage("Le résultat est : " + result);		
+		UserInterface.displayMessage("Le rï¿½sultat est : " + result);		
 
 	}
 }
