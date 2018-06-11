@@ -17,6 +17,7 @@
 package com.scrum.calculator.core;
 
 import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Class to invoke an operation.
@@ -27,7 +28,7 @@ public class InvokeOperation {
     /**
      * List of invoked operation to keep an history.
      */
-    private ArrayList<AbstractOperation> history;
+    private List<AbstractOperation> history;
 
     /**
      * Constructor.
@@ -49,7 +50,7 @@ public class InvokeOperation {
      * Getter history property.
      * @return history of operations
      */
-    public final ArrayList<AbstractOperation> getHistory() {
+    public final List<AbstractOperation> getHistory() {
         return this.history;
     }
 

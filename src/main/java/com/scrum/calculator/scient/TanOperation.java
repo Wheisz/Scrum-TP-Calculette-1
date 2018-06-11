@@ -25,7 +25,7 @@ public class TanOperation extends AbstractOperation {
      * @return string of a tang operation
      */
     @Override
-    public String toStringOperation() {
+    public final String toStringOperation() {
         return " Tan(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }

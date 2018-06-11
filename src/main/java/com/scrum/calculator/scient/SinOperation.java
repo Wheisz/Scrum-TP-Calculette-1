@@ -29,7 +29,7 @@ public class SinOperation extends AbstractOperation {
      * @return string of a sinus operation
      */
     @Override
-    public String toStringOperation() {
+    public final String toStringOperation() {
         return " Sin(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }

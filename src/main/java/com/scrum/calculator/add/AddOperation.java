@@ -43,7 +43,7 @@ public class AddOperation extends AbstractOperation {
      * @return string of an addition
      */
     @Override
-    public String toStringOperation() {
+    public final String toStringOperation() {
         return this.getListNumber().get(0) + " + " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

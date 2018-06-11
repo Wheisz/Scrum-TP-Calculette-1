@@ -39,7 +39,7 @@ public class MultiplyOperation extends AbstractOperation {
      * @return string of a multiplication
      */
     @Override
-    public String toStringOperation() {
+    public final String toStringOperation() {
         return this.getListNumber().get(0) + " * " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

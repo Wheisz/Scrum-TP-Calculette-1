@@ -67,8 +67,9 @@ public final class Application {
 
             userChoice = UserInterface.getIntFromUser();         
 
-            if ( userChoice != leaveNumber )
-                doOperation(userChoice);    
+            if ( userChoice != leaveNumber ) {
+                doOperation(userChoice);
+            }
         }
 
         UserInterface.displayMessage("Ex�cution termin�e.");
@@ -131,7 +132,7 @@ public final class Application {
                         "Le r�sultat est : " + operation.getResult());
             }
             catch (ArithmeticException e) {
-                System.out.println(e.getMessage());
+                UserInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
             }
         }

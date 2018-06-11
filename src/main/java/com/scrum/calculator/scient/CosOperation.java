@@ -29,7 +29,7 @@ public class CosOperation extends AbstractOperation {
      * @return string of a cosinus operation
      */
     @Override
-    public String toStringOperation() {
+    public final String toStringOperation() {
         return " Cos(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
