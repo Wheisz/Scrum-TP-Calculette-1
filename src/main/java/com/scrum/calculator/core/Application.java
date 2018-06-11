@@ -6,6 +6,7 @@
 package com.scrum.calculator.core;
 
 import com.scrum.calculator.add.AddOperation;
+import com.scrum.calculator.sub.SubOperation;
 import com.scrum.calculator.ui.UserInterface;
 
 import java.util.ArrayList;
@@ -49,7 +50,7 @@ public class Application {
 
 
 		case 2:
-			//operation = (IOperation) new Substraction();
+			operation = (Operation) new SubOperation();
 			break;
 
 		}
@@ -57,13 +58,12 @@ public class Application {
 
 			UserInterface.displayMessage("Entrez la valeur :" + i);
 			listOfFloat.add(UserInterface.getFloatFromUser());		
-
-			operation.setListNumber(listOfFloat);
-			Float result = operation.execute();
-
-			UserInterface.displayMessage("Le résultat est : " + result);		
-
-
 		}
+		
+		operation.setListNumber(listOfFloat);
+		Float result = operation.execute();
+
+		UserInterface.displayMessage("Le résultat est : " + result);		
+
 	}
 }
