@@ -69,7 +69,7 @@ public final class Application {
     /**
      * Constructor.
      */
-    private Application() { };
+    private Application() { }
 
     /**
      * Main method.
