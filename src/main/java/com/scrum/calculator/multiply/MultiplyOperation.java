@@ -25,13 +25,6 @@ import com.scrum.calculator.core.AbstractOperation;
 public class MultiplyOperation extends AbstractOperation {
 
     /**
-     * Constructor.
-     */
-    public MultiplyOperation() {
-        super();
-    }
-
-    /**
      * Execute multiplication operation.
      */
     @Override
