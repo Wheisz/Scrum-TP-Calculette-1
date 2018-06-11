@@ -15,6 +15,6 @@
  */
 
 /**
- * Package of multiplication operation
+ * Package of multiplication operation.
  */
 package com.scrum.calculator.multiply;
