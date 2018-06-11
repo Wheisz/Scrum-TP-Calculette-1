@@ -11,12 +11,12 @@ public abstract class AbstractOperation {
     /**
      * Number of parameters necessary to do the operation.
      */
-    private int numberOfParams;
+    protected int numberOfParams;
 
     /**
      * List of numbers to operate.
      */
-    private List<Float> listNumber;
+    protected List<Float> listNumber;
 
     /**
      * Constructor.
@@ -29,7 +29,7 @@ public abstract class AbstractOperation {
      * Method to execute operation.
      * @return result of operation.
      */
-    public abstract float execute();
+    public abstract float execute() throws ArithmeticException;
 
     /**
      * Getter number of parameters for operation.

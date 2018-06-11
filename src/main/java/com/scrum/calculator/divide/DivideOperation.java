@@ -16,13 +16,13 @@
 
 package com.scrum.calculator.divide;
 
-import com.scrum.calculator.core.Operation;
+import com.scrum.calculator.core.AbstractOperation;
 
 /**
  * Class Divide operation.
  * @author tsupio
  */
-public class DivideOperation extends Operation {
+public class DivideOperation extends AbstractOperation {
     /**
      * Constructor.
      */
@@ -36,7 +36,7 @@ public class DivideOperation extends Operation {
      * @return result of divide
      */
     @Override
-    public final float execute() {
+    public final float execute() throws ArithmeticException {
         float result;
         if (listNumber.get(1) == 0) {
             throw new ArithmeticException("Division by zero is impossible. "

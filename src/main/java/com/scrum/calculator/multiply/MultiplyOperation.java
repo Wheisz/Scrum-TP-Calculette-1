@@ -16,13 +16,13 @@
 
 package com.scrum.calculator.multiply;
 
-import com.scrum.calculator.core.Operation;
+import com.scrum.calculator.core.AbstractOperation;
 
 /**
  * Class Multiply.
  * @author tsupio
  */
-public class MultiplyOperation extends Operation {
+public class MultiplyOperation extends AbstractOperation {
 
     /**
      * Constructor.
@@ -37,7 +37,7 @@ public class MultiplyOperation extends Operation {
      * @return result of multiplication
      */
     @Override
-    public final float execute() {
+    public final float execute() throws ArithmeticException {
         float result;
         result = listNumber.get(0) * listNumber.get(1);
         return result;

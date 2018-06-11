@@ -37,7 +37,7 @@ public class AddOperation extends AbstractOperation {
      * @return result of addition
      */
     @Override
-    public final float execute() {
+    public final float execute() throws ArithmeticException {
         float result = 0;
 
         for (int i = 0; i < super.getNumberOfParams(); i++) {
