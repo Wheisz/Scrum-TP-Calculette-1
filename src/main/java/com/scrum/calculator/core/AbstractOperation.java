@@ -16,12 +16,12 @@ public abstract class AbstractOperation {
     /**
      * List of numbers to operate.
      */
-    protected List<Float> listNumber;
+    private List<Float> listNumber;
 
     /**
      * Result of operation.
      */
-    protected float result;
+    private float result;
 
     /**
      * Constructor.
@@ -49,7 +49,7 @@ public abstract class AbstractOperation {
      * Set the number of parameters.
      * @param numberToSet Number to set
      */
-    public final void setNumberOfParams(final int numberToSet) {
+    protected final void setNumberOfParams(final int numberToSet) {
        this.numberOfParams = numberToSet;
     }
 
@@ -69,7 +69,19 @@ public abstract class AbstractOperation {
         return this.listNumber;
     }
 
+    /**
+     * Getter result.
+     * @return get result of operation
+     */
     public final float getResult() {
         return this.result;
+    }
+
+    /**
+     * Setter result.
+     * @param result result of operation
+     */
+    protected final void setResult(float result) {
+        this.result = result;
     }
 }

@@ -43,6 +43,16 @@ public class DivideOperation extends AbstractOperation {
 
         }
         result = getListNumber().get(0) / getListNumber().get(1);
-        super.result = result;
+        this.setResult(result);
+    }
+
+    /**
+     * ToString of division.
+     * @return string of a division
+     */
+    @Override
+    public String toString() {
+        return this.getListNumber().get(0) + " / " + this.getListNumber().get(1)
+                + " = " + this.getResult();
     }
 }

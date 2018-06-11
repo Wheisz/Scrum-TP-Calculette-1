@@ -43,12 +43,16 @@ public class AddOperation extends AbstractOperation {
             result += this.getListNumber().get(i);
         }
 
-        this.result = result;
+        this.setResult(result);
     }
 
+    /**
+     * ToString of addition.
+     * @return string of an addition
+     */
     @Override
     public String toString() {
-        return this.listNumber.get(0) + " + " + this.listNumber.get(1)
-                + " = " + this.result;
+        return this.getListNumber().get(0) + " + " + this.getListNumber().get(1)
+                + " = " + this.getResult();
     }
 }

@@ -101,13 +101,11 @@ public final class Application {
 
         // Historique
         case 8:
-            for (AbstractOperation a : operations.getHistory()) {
-                System.out.println(a.result);
-            }
+            UserInterface.displayMessage(operations.toStringHistory());
             break;
 
         default:
-            System.out.println("Cette op�ration n'existe pas.");
+            UserInterface.displayMessage("Cette op�ration n'existe pas.");
             operation = null;
             break;
         }

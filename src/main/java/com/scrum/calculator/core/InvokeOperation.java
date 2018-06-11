@@ -45,7 +45,24 @@ public class InvokeOperation {
         operation.execute();
     }
 
+    /**
+     * Getter history property.
+     * @return history of operations
+     */
     public ArrayList<AbstractOperation> getHistory() {
         return this.history;
+    }
+
+    /**
+     * String of the history of operations
+     * @return the string for an history
+     */
+    public String toStringHistory() {
+        String result = "";
+        for (int i = 0; i < this.history.size(); i++) {
+            result += "Opération n° " + i + this.history.get(i).toString()
+                    + System.lineSeparator();
+        }
+        return result;
     }
 }

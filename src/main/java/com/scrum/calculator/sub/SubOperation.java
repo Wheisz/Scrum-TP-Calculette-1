@@ -38,7 +38,16 @@ public class SubOperation extends AbstractOperation {
     public final void execute() throws ArithmeticException {
         float result = this.getListNumber().get(0);
         result -= this.getListNumber().get(1);
-        super.result = result;
+        this.setResult(result);
     }
 
+    /**
+     * ToString of subtraction.
+     * @return string of a subtraction
+     */
+    @Override
+    public String toString() {
+        return this.getListNumber().get(0) + " - " + this.getListNumber().get(1)
+                + " = " + this.getResult();
+    }
 }
