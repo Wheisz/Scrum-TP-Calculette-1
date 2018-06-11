@@ -23,8 +23,8 @@ public class AddOperationTest {
         listNumber.add(j);
 
         AddOperation add = new AddOperation();
-
-        float result = add.execute(listNumber);
+        add.setListNumber(listNumber);
+        float result = add.execute();
         Assert.assertEquals("Add not good", 5, result, 0.0);
     }
 
