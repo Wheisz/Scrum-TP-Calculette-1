@@ -9,7 +9,7 @@ import com.scrum.calculator.core.AbstractOperation;
  * @author ida
  */
 public class CosOperation extends AbstractOperation {
-	/**
+    /**
      * Constructor.
      */
     public CosOperation() {
@@ -23,8 +23,7 @@ public class CosOperation extends AbstractOperation {
     @Override
     public final void execute() {
         double result = Math.cos(Math.toRadians(
-               this.getListNumber().get(0)));
-        java.text.DecimalFormat df = new DecimalFormat("0.##");
+                        this.getListNumber().get(0)));        
         this.setResult((float) (Math.round(result*100.0)/100.0));
     }
 

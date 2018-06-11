@@ -3,7 +3,7 @@ package com.scrum.calculator.scient;
 import com.scrum.calculator.core.AbstractOperation;
 
 public class TanOperation extends AbstractOperation {
-	/**
+    /**
      * Constructor.
      */
     public TanOperation() {
@@ -17,7 +17,7 @@ public class TanOperation extends AbstractOperation {
     @Override
     public final void execute() throws ArithmeticException{
         double result = Math.sin(Math.toRadians(
-              this.getListNumber().get(0)));
+                        this.getListNumber().get(0)));
         this.setResult((float) (Math.round(result*100.0)/100.0));
     }
 

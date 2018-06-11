@@ -21,7 +21,7 @@ public class SinOperation extends AbstractOperation {
     @Override
     public final void execute() {
         double result = Math.sin(
-        		Math.toRadians(this.getListNumber().get(0)));
+        Math.toRadians(this.getListNumber().get(0)));
         this.setResult((float) (Math.round(result*100.0)/100.0));
     }
 
@@ -32,6 +32,6 @@ public class SinOperation extends AbstractOperation {
     @Override
     public final String toStringOperation() {
         return " Sin(" + this.getListNumber().get(0) + ")"
-                + " = " + this.getResult();
+               + " = " + this.getResult();
     }
 }
