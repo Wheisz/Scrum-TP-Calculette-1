@@ -1,12 +1,12 @@
 package com.scrum.calculator.sub;
 
-import com.scrum.calculator.core.Operation;
+import com.scrum.calculator.core.AbstractOperation;
 
 /**
  * Subtraction.
  * @author tsupio
  */
-public class SubOperation extends Operation {
+public class SubOperation extends AbstractOperation {
     /**
      * Constructor.
      */

@@ -1,12 +1,12 @@
 package com.scrum.calculator.core;
 
-import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Abstract Operation class.
  * @author willy drouin
  */
-public abstract class Operation {
+public abstract class AbstractOperation {
 
     /**
      * Number of parameters necessary to do the operation.
@@ -16,12 +16,13 @@ public abstract class Operation {
     /**
      * List of numbers to operate.
      */
-    private ArrayList<Float> listNumber;
+    private List<Float> listNumber;
 
     /**
      * Constructor.
      */
-    protected Operation() {
+    protected AbstractOperation() {
+        // It's normal
     }
 
     /**
@@ -48,17 +49,17 @@ public abstract class Operation {
 
     /**
      * Setter of the list of number to operate.
-     * @param listOfFloatNumbers The list of float numbers
+     * @param listOfFloat The list of float numbers
      */
-    public final void setListNumber(final ArrayList<Float> listOfFloatNumbers) {
-        this.listNumber = listOfFloatNumbers;
+    public final void setListNumber(final List<Float> listOfFloat) {
+        this.listNumber = listOfFloat;
     }
 
     /**
      * Return the list of float.
      * @return List of float The list of float
      */
-    public final ArrayList<Float> getListNumber() {
+    public final List<Float> getListNumber() {
         return this.listNumber;
     }
 }

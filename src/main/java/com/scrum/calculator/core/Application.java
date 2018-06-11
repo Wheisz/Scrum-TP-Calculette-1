@@ -39,37 +39,44 @@ public final class Application {
     }
 
     /**
-     * Do the operation.
-     * @param operationNumber id of operation.
+     * Do the main operation.
+     * @param operationNumber Operation to do.
      */
+    @SuppressWarnings({"PMD.NullAssignment", "PMD.LawOfDemeter"})
     private static void doOperation(final int operationNumber) {
 
-        Operation operation = null;
-        ArrayList<Float> listOfFloat = new ArrayList<Float>();
+        AbstractOperation operation;
 
         switch (operationNumber) {
         case 1:
-            operation = (Operation) new AddOperation();
+            operation = (AbstractOperation) new AddOperation();
             break;
 
         case 2:
-            operation = (Operation) new SubOperation();
+            operation = (AbstractOperation) new SubOperation();
             break;
 
         default:
             System.out.println("Cette opération n'existe pas.");
+            operation = null;
             break;
         }
-        for (int i = 1; i <= operation.getNumberOfParams(); i++) {
 
-            UserInterface.displayMessage("Entrez la valeur :" + i);
-            listOfFloat.add(UserInterface.getFloatFromUser());
+        if (operation != null) {
+            final ArrayList<Float> listOfFloat = new ArrayList<Float>();
+
+            for (int i = 1; i <= operation.getNumberOfParams(); i++) {
+
+                UserInterface.displayMessage("Entrez la valeur :" + i);
+                listOfFloat.add(UserInterface.getFloatFromUser());
+            }
+
+            operation.setListNumber(listOfFloat);
+            final Float result = operation.execute();
+
+            UserInterface.displayMessage("Le résultat est : " + result);
         }
 
-        operation.setListNumber(listOfFloat);
-        Float result = operation.execute();
-
-        UserInterface.displayMessage("Le résultat est : " + result);
 
     }
 }

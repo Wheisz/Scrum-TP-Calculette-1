@@ -10,14 +10,14 @@ import java.util.Scanner;
 public final class UserInterface {
 
     /**
-     * Private class.
-     */
-    private UserInterface() { };
-
-    /**
      * Scanner to get user values.
      */
     private static Scanner reader = new Scanner(System.in);
+
+    /**
+     * Private class.
+     */
+    private UserInterface() { };
 
     /**
      * Display a message to the user.
