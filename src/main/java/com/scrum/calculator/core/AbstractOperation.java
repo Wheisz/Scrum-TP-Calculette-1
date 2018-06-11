@@ -32,8 +32,7 @@ public abstract class AbstractOperation {
 
     /**
      * Method to execute operation.
-     * @return result of operation
-     * @throws ArithmeticException
+     * @throws ArithmeticException if operation fails
      */
     public abstract void execute() throws ArithmeticException;
 

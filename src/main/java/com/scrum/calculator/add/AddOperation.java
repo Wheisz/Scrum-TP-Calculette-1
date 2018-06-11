@@ -33,7 +33,6 @@ public class AddOperation extends AbstractOperation {
 
     /**
      * Execute Add operation.
-     * @return result of addition
      */
     @Override
     public final void execute() throws ArithmeticException {

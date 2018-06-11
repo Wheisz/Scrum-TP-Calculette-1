@@ -32,7 +32,6 @@ public class DivideOperation extends AbstractOperation {
 
     /**
      * Execute divide operation.
-     * @return result of divide
      */
     @Override
     public final void execute() throws ArithmeticException {

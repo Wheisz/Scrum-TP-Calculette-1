@@ -89,7 +89,7 @@ public final class Application {
             operation = new SubOperation();
             break;
 
-        // Multiplication1
+        // Multiplication
         case 3:
             operation = new MultiplyOperation();
             break;
