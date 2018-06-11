@@ -82,21 +82,21 @@ public final class Application {
         switch (operationNumber) {
         // Addition
         case 1:
-            operation = (AbstractOperation) new AddOperation();
+            operation = new AddOperation();
             break;
         // Soustraction
         case 2:
-            operation = (AbstractOperation) new SubOperation();
+            operation = new SubOperation();
             break;
 
         // Multiplication1
         case 3:
-            operation = (AbstractOperation) new MultiplyOperation();
+            operation = new MultiplyOperation();
             break;
 
         // Division
         case 4:
-            operation = (AbstractOperation) new DivideOperation();
+            operation = new DivideOperation();
             break;
 
         // Historique
