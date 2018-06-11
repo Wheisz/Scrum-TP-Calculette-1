@@ -1,5 +1,7 @@
 package com.scrum.calculator.scient;
 
+import java.text.DecimalFormat;
+
 import com.scrum.calculator.core.AbstractOperation;
 
 /**
@@ -20,8 +22,10 @@ public class CosOperation extends AbstractOperation {
      */
     @Override
     public final void execute() {
-        double result = Math.cos(this.getListNumber().get(0));
-        this.setResult((float)result);
+        double result = Math.cos(Math.toRadians(
+               this.getListNumber().get(0)));
+        java.text.DecimalFormat df = new DecimalFormat("0.##");
+        this.setResult((float) (Math.round(result*100.0)/100.0));
     }
 
     /**

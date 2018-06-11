@@ -69,7 +69,7 @@ public final class Application {
     /**
      * Constructor.
      */
-    private Application() { }
+    private Application() { };
 
     /**
      * Main method.
@@ -78,8 +78,9 @@ public final class Application {
     public static void main(final String[] args) {
 
         int userChoice = 0;
+        final int LEAVE_NUMBER = 9;
 
-        while (userChoice != LEAVENUMBER) {
+        while (userChoice != LEAVE_NUMBER) {
             // User choice
             UserInterface.displayMessage("Veuillez choisir une op�ration");
             UserInterface.displayMessage(ADDNUMBER + " - Addition");
@@ -88,10 +89,19 @@ public final class Application {
             UserInterface.displayMessage(DIVIDENUMBER + " - Division");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
+            UserInterface.displayMessage("1 - Addition");
+            UserInterface.displayMessage("2 - Soustraction");
+            UserInterface.displayMessage("3 - Mutliplication");
+            UserInterface.displayMessage("4 - Division");
+            UserInterface.displayMessage("5 - Cosinus");
+            UserInterface.displayMessage("6 - Sinus");
+            UserInterface.displayMessage("7 - Tangente");
+            UserInterface.displayMessage("8 - Historique");
+            UserInterface.displayMessage("9 - Quitter");
 
-            userChoice = UserInterface.getIntFromUser();
+            userChoice = UserInterface.getIntFromUser();         
 
-            if (userChoice != LEAVENUMBER) {
+            if (userChoice != LEAVE_NUMBER) {
                 doOperation(userChoice);
             }
         }
@@ -126,6 +136,21 @@ public final class Application {
         // Division
         case DIVIDENUMBER:
             operation = new DivideOperation();
+            break;
+
+        // Cosinus
+        case 5:
+            operation = new CosOperation();
+            break;
+
+        // Sinus
+        case 6:
+            operation = new SinOperation();
+            break;
+
+        // Tangente
+        case 7:
+            operation = new TanOperation();
             break;
 
         // Historique

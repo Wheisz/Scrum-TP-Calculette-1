@@ -16,8 +16,9 @@ public class TanOperation extends AbstractOperation {
      */
     @Override
     public final void execute() throws ArithmeticException{
-        double result = Math.sin(this.getListNumber().get(0));
-        this.setResult((float)result);
+        double result = Math.sin(Math.toRadians(
+              this.getListNumber().get(0)));
+        this.setResult((float) (Math.round(result*100.0)/100.0));
     }
 
     /**
