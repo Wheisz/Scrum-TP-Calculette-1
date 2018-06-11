@@ -16,20 +16,20 @@
 
 package com.scrum.calculator.add;
 
-import com.scrum.calculator.core.Operation;
+import com.scrum.calculator.core.AbstractOperation;
 
 /**
  * Class Addition.
  * @author tsupio
  */
-public class AddOperation extends Operation {
+public class AddOperation extends AbstractOperation {
 
     /**
      * Constructor.
      */
     public AddOperation() {
         super();
-        super.numberOfParams = 2;
+        super.setNumberOfParams(2);
     }
 
     /**
@@ -40,19 +40,11 @@ public class AddOperation extends Operation {
     public final float execute() {
         float result = 0;
 
-        for (int i = 0; i < super.numberOfParams; i++) {
-            result += this.listNumber.get(i);
+        for (int i = 0; i < super.getNumberOfParams(); i++) {
+            result += this.getListNumber().get(i);
         }
 
         return result;
     }
 
-    /**
-     * Number of values to add.
-     * @return
-     */
-    @Override
-    public final int getNumberOfParams() {
-        return super.getNumberOfParams();
-    }
 }

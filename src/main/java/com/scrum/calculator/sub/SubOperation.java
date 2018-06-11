@@ -16,19 +16,19 @@
 
 package com.scrum.calculator.sub;
 
-import com.scrum.calculator.core.Operation;
+import com.scrum.calculator.core.AbstractOperation;
 
 /**
  * Class Subtraction.
  * @author tsupio
  */
-public class SubOperation extends Operation {
+public class SubOperation extends AbstractOperation {
     /**
      * Constructor.
      */
     public SubOperation() {
         super();
-        super.numberOfParams = 2;
+        super.setNumberOfParams(2);
     }
 
     /**
@@ -37,17 +37,9 @@ public class SubOperation extends Operation {
      */
     @Override
     public final float execute() {
-        float result = listNumber.get(0);
-        result -= this.listNumber.get(1);
+        float result = this.getListNumber().get(0);
+        result -= this.getListNumber().get(1);
         return result;
     }
 
-    /**
-     * Number of values to sub.
-     * @return
-     */
-    @Override
-    public final int getNumberOfParams() {
-        return super.getNumberOfParams();
-    }
 }
