@@ -27,7 +27,7 @@ public class CosOperationTest {
 	        cos.setListNumber(listNumber);
 	        cos.execute();
 	        Assert.assertEquals("Add not good",
-	                0, cos.getResult(), 0.0);
+	                (float)0, cos.getResult(), 0.0);
 	    }
 
 	    @After

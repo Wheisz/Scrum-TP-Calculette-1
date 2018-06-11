@@ -24,6 +24,9 @@ package com.scrum.calculator.core;
 import com.scrum.calculator.add.AddOperation;
 import com.scrum.calculator.divide.DivideOperation;
 import com.scrum.calculator.multiply.MultiplyOperation;
+import com.scrum.calculator.scient.CosOperation;
+import com.scrum.calculator.scient.SinOperation;
+import com.scrum.calculator.scient.TanOperation;
 import com.scrum.calculator.sub.SubOperation;
 import com.scrum.calculator.ui.UserInterface;
 
@@ -58,6 +61,9 @@ public final class Application {
             UserInterface.displayMessage("2 - Soustraction");
             UserInterface.displayMessage("3 - Mutliplication");
             UserInterface.displayMessage("4 - Division");
+            UserInterface.displayMessage("5 - Cosinus");
+            UserInterface.displayMessage("6 - Sinus");
+            UserInterface.displayMessage("7 - Tangente");
             UserInterface.displayMessage("8 - Historique");
             UserInterface.displayMessage("9 - Quitter");
 
@@ -92,13 +98,28 @@ public final class Application {
         // Multiplication
         case 3:
             operation = new MultiplyOperation();
-            break;
+            break;       
 
         // Division
         case 4:
             operation = new DivideOperation();
             break;
 
+        // Cosinus
+        case 5:
+            operation = new CosOperation();
+            break;
+            
+        // Sinus
+        case 6:
+            operation = new SinOperation();
+            break;
+            
+        // Tangente
+        case 7:
+            operation = new TanOperation();
+            break;
+            
         // Historique
         case 8:
             UserInterface.displayMessage(operations.toStringHistory());

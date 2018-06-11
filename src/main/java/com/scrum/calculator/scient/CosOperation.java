@@ -21,8 +21,9 @@ public class CosOperation extends AbstractOperation {
      */
     @Override
     public final void execute() {
-        double result = Math.cos(this.getListNumber().get(0));
-        this.setResult((float)result);
+        double result = Math.cos(Math.toRadians(
+               this.getListNumber().get(0)));
+        this.setResult(Math.round(result * 100) / 100);
     }
     
     @Override
