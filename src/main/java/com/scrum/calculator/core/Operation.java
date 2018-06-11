@@ -8,42 +8,57 @@ import java.util.ArrayList;
  */
 public abstract class Operation {
 
-	/**
-	 * Number of parameters necessary to do the operation.
-	 */
-	protected int numberOfParams;
+    /**
+     * Number of parameters necessary to do the operation.
+     */
+    private int numberOfParams;
 
-	/**
-	 * List of numbers to operate.
-	 */
-	protected ArrayList<Float> listNumber;
+    /**
+     * List of numbers to operate.
+     */
+    private ArrayList<Float> listNumber;
 
-	/**
-	 * Constructor.
-	 */
-	protected Operation() {
-	}
+    /**
+     * Constructor.
+     */
+    protected Operation() {
+    }
 
-	/**
-	 * Method to execute operation.
-	 * @return result of operation.
-	 */
-	public abstract float execute();
+    /**
+     * Method to execute operation.
+     * @return result of operation.
+     */
+    public abstract float execute();
 
-	/**
-	 * Getter number of parameters for operation.
-	 * @return
-	 */
-	public int getNumberOfParams(){
-		return this.numberOfParams;
-	}
+    /**
+     * Getter number of parameters for operation.
+     * @return Number of wanted parameters.
+     */
+    public final int getNumberOfParams() {
+        return this.numberOfParams;
+    }
 
-	/**
-	 * Setter of the list of number to operate
-	 * @param listNumber
-	 */
-	public void setListNumber(final ArrayList<Float> listNumber) {
-		this.listNumber = listNumber;
-	}
-	
+    /**
+     * Set the number of parameters.
+     * @param numberToSet Number to set
+     */
+    public final void setNumberOfParams(final int numberToSet) {
+       this.numberOfParams = numberToSet;
+    }
+
+    /**
+     * Setter of the list of number to operate.
+     * @param listOfFloatNumbers The list of float numbers
+     */
+    public final void setListNumber(final ArrayList<Float> listOfFloatNumbers) {
+        this.listNumber = listOfFloatNumbers;
+    }
+
+    /**
+     * Return the list of float.
+     * @return List of float The list of float
+     */
+    public final ArrayList<Float> getListNumber() {
+        return this.listNumber;
+    }
 }

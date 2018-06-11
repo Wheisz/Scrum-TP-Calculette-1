@@ -1,7 +1,7 @@
 /****************************************************************************
  * Calculator application.
  *
- * 
+ *
  * ***************************************************************************/
 package com.scrum.calculator.core;
 
@@ -10,60 +10,66 @@ import com.scrum.calculator.sub.SubOperation;
 import com.scrum.calculator.ui.UserInterface;
 
 import java.util.ArrayList;
-import java.util.Scanner;
 
 /**
- * Main application of the calculator
+ * Main application of the calculator.
  * @author Willy
  *
  */
-public class Application {
+public final class Application {
 
-	/**
-	 * Main method
-	 */
-	public static void main(final String[] args) {
+    /**
+     * Constructor.
+     */
+    private Application() { };
 
-		// User choice
-		UserInterface.displayMessage("Veuillez choisir une opération");
-		UserInterface.displayMessage("1 - Addition");
-		UserInterface.displayMessage("2 - Soustraction");
-		UserInterface.displayMessage("3 - Mutliplication");
+    /**
+     * Main method.
+     * @param args String table.
+     */
+    public static void main(final String[] args) {
 
-		doOperation(UserInterface.getIntFromUser());
-	}
+        // User choice
+        UserInterface.displayMessage("Veuillez choisir une opération");
+        UserInterface.displayMessage("1 - Addition");
+        UserInterface.displayMessage("2 - Soustraction");
+        UserInterface.displayMessage("3 - Mutliplication");
 
-	/**
-	 * Do the operation
-	 * @param operationNumber id of operation
-	 */
-	private static void doOperation(int operationNumber){
+        doOperation(UserInterface.getIntFromUser());
+    }
 
-		Operation operation = null;
-		ArrayList<Float> listOfFloat = new ArrayList<Float>();
+    /**
+     * Do the operation.
+     * @param operationNumber id of operation.
+     */
+    private static void doOperation(final int operationNumber) {
 
+        Operation operation = null;
+        ArrayList<Float> listOfFloat = new ArrayList<Float>();
 
-		switch(operationNumber){
-		case 1: 
-			operation = (Operation) new AddOperation();
-			break;		
+        switch (operationNumber) {
+        case 1:
+            operation = (Operation) new AddOperation();
+            break;
 
+        case 2:
+            operation = (Operation) new SubOperation();
+            break;
 
-		case 2:
-			operation = (Operation) new SubOperation();
-			break;
+        default:
+            System.out.println("Cette opération n'existe pas.");
+            break;
+        }
+        for (int i = 1; i <= operation.getNumberOfParams(); i++) {
 
-		}
-		for (int i = 1; i <= operation.getNumberOfParams(); i++){
+            UserInterface.displayMessage("Entrez la valeur :" + i);
+            listOfFloat.add(UserInterface.getFloatFromUser());
+        }
 
-			UserInterface.displayMessage("Entrez la valeur :" + i);
-			listOfFloat.add(UserInterface.getFloatFromUser());		
-		}
-		
-		operation.setListNumber(listOfFloat);
-		Float result = operation.execute();
+        operation.setListNumber(listOfFloat);
+        Float result = operation.execute();
 
-		UserInterface.displayMessage("Le résultat est : " + result);		
+        UserInterface.displayMessage("Le résultat est : " + result);
 
-	}
+    }
 }
