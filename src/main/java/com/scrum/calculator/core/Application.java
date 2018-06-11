@@ -53,9 +53,9 @@ public final class Application {
     public static void main(final String[] args) {
 
         int userChoice = 0;
-        int leaveNumber = 9;
+        final int LEAVE_NUMBER = 9;
 
-        while (userChoice != leaveNumber) {
+        while (userChoice != LEAVE_NUMBER) {
             // User choice
             UserInterface.displayMessage("Veuillez choisir une op�ration");
             UserInterface.displayMessage("1 - Addition");
@@ -67,7 +67,7 @@ public final class Application {
 
             userChoice = UserInterface.getIntFromUser();         
 
-            if ( userChoice != leaveNumber ) {
+            if (userChoice != LEAVE_NUMBER) {
                 doOperation(userChoice);
             }
         }
