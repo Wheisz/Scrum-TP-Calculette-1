@@ -23,12 +23,6 @@ import com.scrum.calculator.core.AbstractOperation;
  * @author tsupio
  */
 public class DivideOperation extends AbstractOperation {
-    /**
-     * Constructor.
-     */
-    public DivideOperation() {
-        super();
-    }
 
     /**
      * Execute divide operation.

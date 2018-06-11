@@ -25,13 +25,6 @@ import com.scrum.calculator.core.AbstractOperation;
 public class AddOperation extends AbstractOperation {
 
     /**
-     * Constructor.
-     */
-    public AddOperation() {
-        super();
-    }
-
-    /**
      * Execute Add operation.
      */
     @Override
