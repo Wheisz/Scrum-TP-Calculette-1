@@ -22,7 +22,7 @@ public abstract class AbstractOperation {
      * Constructor.
      */
     protected AbstractOperation() {
-        // It's normal
+        numberOfParams = 2;
     }
 
     /**

@@ -28,7 +28,6 @@ public class SubOperation extends AbstractOperation {
      */
     public SubOperation() {
         super();
-        super.setNumberOfParams(2);
     }
 
     /**
