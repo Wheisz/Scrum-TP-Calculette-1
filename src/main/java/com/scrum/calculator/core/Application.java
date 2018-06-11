@@ -47,13 +47,14 @@ public final class Application {
      * Main method.
      * @param args String table.
      */
-    public static void main(final String[] args) { 
+    public static void main(final String[] args) {
 
         int userChoice = 0;
+        final int exitInt = 9;
 
-        while (userChoice != 9) {
+        while (userChoice != exitInt) {
             // User choice
-            UserInterface.displayMessage("Veuillez choisir une op�ration");
+            UserInterface.displayMessage("Veuillez choisir une opération");
             UserInterface.displayMessage("1 - Addition");
             UserInterface.displayMessage("2 - Soustraction");
             UserInterface.displayMessage("3 - Mutliplication");
@@ -61,13 +62,14 @@ public final class Application {
             UserInterface.displayMessage("8 - Historique");
             UserInterface.displayMessage("9 - Quitter");
 
-            userChoice = UserInterface.getIntFromUser();         
+            userChoice = UserInterface.getIntFromUser();
 
-            if (userChoice != 9 )
-                doOperation(userChoice);    
+            if (userChoice != exitInt){
+                doOperation(userChoice);
+            }
         }
 
-        UserInterface.displayMessage("Ex�cution termin�e.");
+        UserInterface.displayMessage("Exécution terminée.");
     }
 
     /**
@@ -126,7 +128,7 @@ public final class Application {
                 UserInterface.displayMessage("Le r�sultat est : " + operation.getResult());
             }
             catch (ArithmeticException e) {
-                System.out.println(e.getMessage());
+                UserInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
             }
         }

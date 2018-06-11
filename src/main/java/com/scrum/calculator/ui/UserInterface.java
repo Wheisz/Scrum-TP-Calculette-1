@@ -48,7 +48,12 @@ public final class UserInterface {
      * @return User's number
      */
     public static int getIntFromUser() {
-        return reader.nextInt();
+        try {
+            return Integer.parseInt(reader.nextLine());
+        } catch (NumberFormatException e) {
+            UserInterface.displayMessage("Veuillez saisir une valeur valide.");
+            return getIntFromUser();
+        }
     }
 
     /**
@@ -56,6 +61,11 @@ public final class UserInterface {
      * @return Float number of the user
      */
     public static float getFloatFromUser() {
-        return reader.nextFloat();
+        try {
+            return Float.parseFloat((reader.nextLine()));
+        } catch (NumberFormatException e) {
+            UserInterface.displayMessage("Veuillez saisir une valeur valide.");
+            return getFloatFromUser();
+        }
     }
 }
