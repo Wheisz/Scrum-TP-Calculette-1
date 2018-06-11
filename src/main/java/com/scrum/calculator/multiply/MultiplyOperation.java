@@ -39,6 +39,16 @@ public class MultiplyOperation extends AbstractOperation {
     public final void execute() throws ArithmeticException {
         float result;
         result = this.getListNumber().get(0) * this.getListNumber().get(1);
-        super.result = result;
+        this.setResult(result);
+    }
+
+    /**
+     * ToString of multiplication.
+     * @return string of a multiplication
+     */
+    @Override
+    public String toString() {
+        return this.getListNumber().get(0) + " * " + this.getListNumber().get(1)
+                + " = " + this.getResult();
     }
 }
