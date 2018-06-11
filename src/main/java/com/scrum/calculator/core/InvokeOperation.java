@@ -28,7 +28,7 @@ public class InvokeOperation {
     /**
      * List of invoked operation to keep an history.
      */
-    private List<AbstractOperation> history;
+    private final List<AbstractOperation> history;
 
     /**
      * Constructor.
