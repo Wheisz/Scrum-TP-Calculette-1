@@ -42,6 +42,31 @@ public final class Application {
     private static InvokeOperation operations = new InvokeOperation();
 
     /**
+     * Value for addition.
+     */
+    private static final int ADDNUMBER = 1;
+    /**
+     * Value for subtraction.
+     */
+    private static final int SUBNUMBER = 2;
+    /**
+     * Value for multiplication.
+     */
+    private static final int MULTIPLYNUMBER = 3;
+    /**
+     * Value for division.
+     */
+    private static final int DIVIDENUMBER = 4;
+    /**
+     * Value for history.
+     */
+    private static final int HISTORYNUMBER = 8;
+    /**
+     * Value for leaving application.
+     */
+    private static final int LEAVENUMBER = 9;
+
+    /**
      * Constructor.
      */
     private Application() { };
@@ -54,27 +79,24 @@ public final class Application {
 
         int userChoice = 0;
 
-        final int LEAVE_NUMBER = 9;
-
-        while (userChoice != LEAVE_NUMBER) {
-
+        while (userChoice != LEAVENUMBER) {
             // User choice
-            UserInterface.displayMessage("Veuillez choisir une opération");
-            UserInterface.displayMessage("1 - Addition");
-            UserInterface.displayMessage("2 - Soustraction");
-            UserInterface.displayMessage("3 - Mutliplication");
-            UserInterface.displayMessage("4 - Division");
-            UserInterface.displayMessage("8 - Historique");
-            UserInterface.displayMessage("9 - Quitter");
+            UserInterface.displayMessage("Veuillez choisir une op�ration");
+            UserInterface.displayMessage(ADDNUMBER + " - Addition");
+            UserInterface.displayMessage(SUBNUMBER + " - Soustraction");
+            UserInterface.displayMessage(MULTIPLYNUMBER + " - Mutliplication");
+            UserInterface.displayMessage(DIVIDENUMBER + " - Division");
+            UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
+            UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
-            userChoice = UserInterface.getIntFromUser();
+            userChoice = UserInterface.getIntFromUser();         
 
-            if (userChoice != LEAVE_NUMBER) {
+            if (userChoice != LEAVENUMBER) {
                 doOperation(userChoice);
             }
         }
 
-        UserInterface.displayMessage("Exécution terminée.");
+        UserInterface.displayMessage("Ex�cution termin�e.");
     }
 
     /**
@@ -88,26 +110,26 @@ public final class Application {
 
         switch (operationNumber) {
         // Addition
-        case 1:
+        case ADDNUMBER:
             operation = new AddOperation();
             break;
         // Soustraction
-        case 2:
+        case SUBNUMBER:
             operation = new SubOperation();
             break;
 
         // Multiplication
-        case 3:
+        case MULTIPLYNUMBER:
             operation = new MultiplyOperation();
             break;
 
         // Division
-        case 4:
+        case DIVIDENUMBER:
             operation = new DivideOperation();
             break;
 
         // Historique
-        case 8:
+        case HISTORYNUMBER:
             UserInterface.displayMessage(operations.toStringHistory());
             break;
 
@@ -132,8 +154,7 @@ public final class Application {
                 operations.storeAndExecute(operation);
                 UserInterface.displayMessage(
                         "Le r�sultat est : " + operation.getResult());
-            }
-            catch (ArithmeticException e) {
+            } catch (ArithmeticException e) {
                 UserInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
             }

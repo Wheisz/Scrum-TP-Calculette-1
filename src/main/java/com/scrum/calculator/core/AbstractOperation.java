@@ -78,10 +78,10 @@ public abstract class AbstractOperation {
 
     /**
      * Setter result.
-     * @param result result of operation
+     * @param value result of operation
      */
-    protected final void setResult(float result) {
-        this.result = result;
+    protected final void setResult(final float value) {
+        this.result = value;
     }
 
     /**
