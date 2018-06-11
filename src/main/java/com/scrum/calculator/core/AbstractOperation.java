@@ -11,7 +11,7 @@ public abstract class AbstractOperation {
     /**
      * Number of parameters necessary to do the operation.
      */
-    protected int numberOfParams;
+    private int numberOfParams;
 
     /**
      * List of numbers to operate.
@@ -27,7 +27,8 @@ public abstract class AbstractOperation {
 
     /**
      * Method to execute operation.
-     * @return result of operation.
+     * @return result of operation
+     * @throws ArithmeticException
      */
     public abstract float execute() throws ArithmeticException;
 

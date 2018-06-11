@@ -28,7 +28,7 @@ public class DivideOperation extends AbstractOperation {
      */
     public DivideOperation() {
         super();
-        super.numberOfParams = 2;
+        super.setNumberOfParams(2);
     }
 
     /**

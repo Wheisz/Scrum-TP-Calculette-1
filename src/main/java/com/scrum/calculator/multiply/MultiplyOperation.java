@@ -29,7 +29,7 @@ public class MultiplyOperation extends AbstractOperation {
      */
     public MultiplyOperation() {
         super();
-        super.numberOfParams = 2;
+        super.setNumberOfParams(2);
     }
 
     /**
