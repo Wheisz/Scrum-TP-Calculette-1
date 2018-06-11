@@ -36,6 +36,8 @@ import java.util.ArrayList;
  */
 public final class Application {
 
+    private static InvokeOperation operations = new InvokeOperation();
+
     /**
      * Constructor.
      */
@@ -51,11 +53,12 @@ public final class Application {
 
         while (userChoice != 9) {
             // User choice
-            UserInterface.displayMessage("Veuillez choisir une opération");
+            UserInterface.displayMessage("Veuillez choisir une opï¿½ration");
             UserInterface.displayMessage("1 - Addition");
             UserInterface.displayMessage("2 - Soustraction");
             UserInterface.displayMessage("3 - Mutliplication");
             UserInterface.displayMessage("4 - Division");
+            UserInterface.displayMessage("8 - Historique");
             UserInterface.displayMessage("9 - Quitter");
 
             userChoice = UserInterface.getIntFromUser();         
@@ -64,7 +67,7 @@ public final class Application {
                 doOperation(userChoice);    
         }
 
-        UserInterface.displayMessage("Exécution terminée.");
+        UserInterface.displayMessage("Exï¿½cution terminï¿½e.");
     }
 
     /**
@@ -74,28 +77,37 @@ public final class Application {
     @SuppressWarnings({"PMD.NullAssignment", "PMD.LawOfDemeter"})
     private static void doOperation(final int operationNumber) {
 
-        AbstractOperation operation;
+        AbstractOperation operation = null;
 
         switch (operationNumber) {
+        // Addition
         case 1:
             operation = (AbstractOperation) new AddOperation();
             break;
-
+        // Soustraction
         case 2:
             operation = (AbstractOperation) new SubOperation();
             break;
 
+        // Multiplication1
         case 3:
             operation = (AbstractOperation) new MultiplyOperation();
             break;
 
+        // Division
         case 4:
             operation = (AbstractOperation) new DivideOperation();
             break;
 
+        // Historique
+        case 8:
+            for (AbstractOperation a : operations.getHistory()) {
+                System.out.println(a.result);
+            }
+            break;
 
         default:
-            System.out.println("Cette opération n'existe pas.");
+            System.out.println("Cette opï¿½ration n'existe pas.");
             operation = null;
             break;
         }
@@ -111,21 +123,14 @@ public final class Application {
 
             operation.setListNumber(listOfFloat);
 
-            Float result = (float) 0;
-
             try {
-                result = operation.execute();
-                UserInterface.displayMessage("Le résultat est : " + result );       
+                operations.storeAndExecute(operation);
+                UserInterface.displayMessage("Le rï¿½sultat est : " + operation.getResult());
             }
             catch (ArithmeticException e) {
                 System.out.println(e.getMessage());
                 doOperation(operationNumber);
-            }            
-
-
-                 
+            }
         }
-
-
     }
 }

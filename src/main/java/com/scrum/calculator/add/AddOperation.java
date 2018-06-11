@@ -36,14 +36,19 @@ public class AddOperation extends AbstractOperation {
      * @return result of addition
      */
     @Override
-    public final float execute() throws ArithmeticException {
+    public final void execute() throws ArithmeticException {
         float result = 0;
 
         for (int i = 0; i < super.getNumberOfParams(); i++) {
             result += this.getListNumber().get(i);
         }
 
-        return result;
+        this.result = result;
     }
 
+    @Override
+    public String toString() {
+        return this.listNumber.get(0) + " + " + this.listNumber.get(1)
+                + " = " + this.result;
+    }
 }

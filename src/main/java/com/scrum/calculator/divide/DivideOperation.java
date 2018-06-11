@@ -35,7 +35,7 @@ public class DivideOperation extends AbstractOperation {
      * @return result of divide
      */
     @Override
-    public final float execute() throws ArithmeticException {
+    public final void execute() throws ArithmeticException {
         float result;
         if (this.getListNumber().get(1) == 0) {
             throw new ArithmeticException("Division by zero is impossible. "
@@ -43,6 +43,6 @@ public class DivideOperation extends AbstractOperation {
 
         }
         result = getListNumber().get(0) / getListNumber().get(1);
-        return result;
+        super.result = result;
     }
 }
