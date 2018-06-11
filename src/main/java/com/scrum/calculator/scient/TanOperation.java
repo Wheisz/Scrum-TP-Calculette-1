@@ -16,7 +16,7 @@ public class TanOperation extends AbstractOperation {
      * @return result of tan
      */
     @Override
-    public final void execute() {
+    public final void execute() throws ArithmeticException{
         double result = Math.sin(this.getListNumber().get(0));
         this.setResult((float)result);
     }
