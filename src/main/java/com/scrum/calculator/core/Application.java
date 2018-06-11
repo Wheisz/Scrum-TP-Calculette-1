@@ -168,7 +168,7 @@ public final class Application {
             break;
 
         default:
-            UserInterface.displayMessage("Cette opï¿½ration n'existe pas.");
+            UserInterface.displayMessage("Cette opération n'existe pas.");
             operation = null;
             break;
         }
@@ -187,7 +187,7 @@ public final class Application {
             try {
                 operations.storeAndExecute(operation);
                 UserInterface.displayMessage(
-                        "Le rï¿½sultat est : " + operation.getResult());
+                        "Le résultat est : " + operation.getResult());
             } catch (ArithmeticException e) {
                 UserInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
