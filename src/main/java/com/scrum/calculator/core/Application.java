@@ -89,7 +89,7 @@ public final class Application {
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
-            userChoice = UserInterface.getIntFromUser();         
+            userChoice = UserInterface.getIntFromUser();
 
             if (userChoice != LEAVENUMBER) {
                 doOperation(userChoice);

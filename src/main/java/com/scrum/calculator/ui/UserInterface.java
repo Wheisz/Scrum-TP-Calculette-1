@@ -62,7 +62,7 @@ public final class UserInterface {
      */
     public static float getFloatFromUser() {
         try {
-            return Float.parseFloat((reader.nextLine()));
+            return Float.parseFloat(reader.nextLine());
         } catch (NumberFormatException e) {
             UserInterface.displayMessage("Veuillez saisir une valeur valide.");
             return getFloatFromUser();

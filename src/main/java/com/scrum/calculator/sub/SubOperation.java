@@ -23,12 +23,6 @@ import com.scrum.calculator.core.AbstractOperation;
  * @author tsupio
  */
 public class SubOperation extends AbstractOperation {
-    /**
-     * Constructor.
-     */
-    public SubOperation() {
-        super();
-    }
 
     /**
      * Execute Sub operation.

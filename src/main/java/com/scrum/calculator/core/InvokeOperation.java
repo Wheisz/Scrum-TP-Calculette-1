@@ -55,7 +55,7 @@ public class InvokeOperation {
     }
 
     /**
-     * String of the history of operations
+     * String of the history of operations.
      * @return the string for an history
      */
     public final String toStringHistory() {
