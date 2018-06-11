@@ -19,6 +19,11 @@ public abstract class AbstractOperation {
     protected List<Float> listNumber;
 
     /**
+     * Result of operation.
+     */
+    protected float result;
+
+    /**
      * Constructor.
      */
     protected AbstractOperation() {
@@ -30,7 +35,7 @@ public abstract class AbstractOperation {
      * @return result of operation
      * @throws ArithmeticException
      */
-    public abstract float execute() throws ArithmeticException;
+    public abstract void execute() throws ArithmeticException;
 
     /**
      * Getter number of parameters for operation.
@@ -62,5 +67,9 @@ public abstract class AbstractOperation {
      */
     public final List<Float> getListNumber() {
         return this.listNumber;
+    }
+
+    public final float getResult() {
+        return this.result;
     }
 }

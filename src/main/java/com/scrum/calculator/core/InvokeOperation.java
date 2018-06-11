@@ -44,4 +44,8 @@ public class InvokeOperation {
         this.history.add(operation);
         operation.execute();
     }
+
+    public ArrayList<AbstractOperation> getHistory() {
+        return this.history;
+    }
 }

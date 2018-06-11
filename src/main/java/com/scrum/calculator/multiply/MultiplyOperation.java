@@ -36,9 +36,9 @@ public class MultiplyOperation extends AbstractOperation {
      * @return result of multiplication
      */
     @Override
-    public final float execute() throws ArithmeticException {
+    public final void execute() throws ArithmeticException {
         float result;
         result = this.getListNumber().get(0) * this.getListNumber().get(1);
-        return result;
+        super.result = result;
     }
 }
