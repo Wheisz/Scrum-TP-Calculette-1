@@ -32,7 +32,6 @@ public class SubOperation extends AbstractOperation {
 
     /**
      * Execute Sub operation.
-     * @return result of addition
      */
     @Override
     public final void execute() throws ArithmeticException {

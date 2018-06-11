@@ -33,7 +33,6 @@ public class MultiplyOperation extends AbstractOperation {
 
     /**
      * Execute multiplication operation.
-     * @return result of multiplication
      */
     @Override
     public final void execute() throws ArithmeticException {
