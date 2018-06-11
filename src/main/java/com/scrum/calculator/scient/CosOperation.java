@@ -17,7 +17,6 @@ public class CosOperation extends AbstractOperation {
 
     /**
      * Execute Cos operation.
-     * @return result cos
      */
     @Override
     public final void execute() {

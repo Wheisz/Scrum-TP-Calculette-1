@@ -60,7 +60,8 @@ public class InvokeOperation {
     public final String toStringHistory() {
         String result = "";
         for (int i = 0; i < this.history.size(); i++) {
-            result += "Opération n° " + i + this.history.get(i).toString()
+            result += "Opération n° " + i + " : "
+                    + this.history.get(i).toStringOperation()
                     + System.lineSeparator();
         }
         return result;

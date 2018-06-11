@@ -17,7 +17,6 @@ public class SinOperation extends AbstractOperation {
 
     /**
      * Execute Sin operation.
-     * @return result of cos
      */
     @Override
     public final void execute() {

@@ -13,7 +13,6 @@ public class TanOperation extends AbstractOperation {
 
     /**
      * Execute Tan operation.
-     * @return result of tan
      */
     @Override
     public final void execute() throws ArithmeticException{
