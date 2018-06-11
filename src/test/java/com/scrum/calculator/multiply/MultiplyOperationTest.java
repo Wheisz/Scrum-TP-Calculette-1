@@ -40,8 +40,9 @@ public class MultiplyOperationTest {
 
         MultiplyOperation multiply = new MultiplyOperation();
         multiply.setListNumber(listNumber);
-        float result = multiply.execute();
-        Assert.assertEquals("Multiply not good", 6, result, 0.0);
+        multiply.execute();
+        Assert.assertEquals("Multiply not good",
+                6, multiply.getResult(), 0.0);
     }
 
     @After

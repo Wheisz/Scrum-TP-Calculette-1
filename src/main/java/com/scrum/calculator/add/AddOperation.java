@@ -25,15 +25,7 @@ import com.scrum.calculator.core.AbstractOperation;
 public class AddOperation extends AbstractOperation {
 
     /**
-     * Constructor.
-     */
-    public AddOperation() {
-        super();
-    }
-
-    /**
      * Execute Add operation.
-     * @return result of addition
      */
     @Override
     public final void execute() throws ArithmeticException {
@@ -51,7 +43,7 @@ public class AddOperation extends AbstractOperation {
      * @return string of an addition
      */
     @Override
-    public String toString() {
+    public final String toStringOperation() {
         return this.getListNumber().get(0) + " + " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

@@ -36,6 +36,9 @@ import java.util.ArrayList;
  */
 public final class Application {
 
+    /**
+     * Invoker of operations.
+     */
     private static InvokeOperation operations = new InvokeOperation();
 
     /**
@@ -50,9 +53,11 @@ public final class Application {
     public static void main(final String[] args) {
 
         int userChoice = 0;
-        final int exitInt = 9;
 
-        while (userChoice != exitInt) {
+        final int LEAVE_NUMBER = 9;
+
+        while (userChoice != LEAVE_NUMBER) {
+
             // User choice
             UserInterface.displayMessage("Veuillez choisir une opération");
             UserInterface.displayMessage("1 - Addition");
@@ -64,7 +69,7 @@ public final class Application {
 
             userChoice = UserInterface.getIntFromUser();
 
-            if (userChoice != exitInt){
+            if (userChoice != LEAVE_NUMBER) {
                 doOperation(userChoice);
             }
         }
@@ -84,21 +89,21 @@ public final class Application {
         switch (operationNumber) {
         // Addition
         case 1:
-            operation = (AbstractOperation) new AddOperation();
+            operation = new AddOperation();
             break;
         // Soustraction
         case 2:
-            operation = (AbstractOperation) new SubOperation();
+            operation = new SubOperation();
             break;
 
-        // Multiplication1
+        // Multiplication
         case 3:
-            operation = (AbstractOperation) new MultiplyOperation();
+            operation = new MultiplyOperation();
             break;
 
         // Division
         case 4:
-            operation = (AbstractOperation) new DivideOperation();
+            operation = new DivideOperation();
             break;
 
         // Historique
@@ -125,7 +130,8 @@ public final class Application {
 
             try {
                 operations.storeAndExecute(operation);
-                UserInterface.displayMessage("Le r�sultat est : " + operation.getResult());
+                UserInterface.displayMessage(
+                        "Le r�sultat est : " + operation.getResult());
             }
             catch (ArithmeticException e) {
                 UserInterface.displayMessage(e.getMessage());

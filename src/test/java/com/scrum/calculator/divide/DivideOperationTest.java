@@ -40,8 +40,9 @@ public class DivideOperationTest {
 
         DivideOperation divide = new DivideOperation();
         divide.setListNumber(listNumber);
-        float result = divide.execute();
-        Assert.assertEquals("Divide not good", 4, result, 0.0);
+        divide.execute();
+        Assert.assertEquals("Divide not good",
+                4, divide.getResult(), 0.0);
     }
 
     @Test (expected = ArithmeticException.class)
@@ -54,8 +55,9 @@ public class DivideOperationTest {
 
         DivideOperation divide = new DivideOperation();
         divide.setListNumber(listNumber);
-        float result = divide.execute();
-        Assert.assertEquals("Divide not good", 4, result, 0.0);
+        divide.execute();
+        Assert.assertEquals("Divide not good",
+                4, divide.getResult(), 0.0);
     }
 
     @After

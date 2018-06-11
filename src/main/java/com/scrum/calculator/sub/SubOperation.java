@@ -32,7 +32,6 @@ public class SubOperation extends AbstractOperation {
 
     /**
      * Execute Sub operation.
-     * @return result of addition
      */
     @Override
     public final void execute() throws ArithmeticException {
@@ -46,7 +45,7 @@ public class SubOperation extends AbstractOperation {
      * @return string of a subtraction
      */
     @Override
-    public String toString() {
+    public final String toStringOperation() {
         return this.getListNumber().get(0) + " - " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

@@ -32,8 +32,7 @@ public abstract class AbstractOperation {
 
     /**
      * Method to execute operation.
-     * @return result of operation
-     * @throws ArithmeticException
+     * @throws ArithmeticException if operation fails
      */
     public abstract void execute() throws ArithmeticException;
 
@@ -84,4 +83,10 @@ public abstract class AbstractOperation {
     protected final void setResult(float result) {
         this.result = result;
     }
+
+    /**
+     * Method to get the string of the operation.
+     * @return string of operation
+     */
+    public abstract String toStringOperation();
 }

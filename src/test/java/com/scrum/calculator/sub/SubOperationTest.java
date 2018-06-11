@@ -41,8 +41,9 @@ public class SubOperationTest {
 
         SubOperation sub = new SubOperation();
         sub.setListNumber(listNumber);
-        float result = sub.execute();
-        Assert.assertEquals("Add not good", -1, result, 0.0);
+        sub.execute();
+        Assert.assertEquals("Add not good",
+                -1, sub.getResult(), 0.0);
     }
 
     @After

@@ -40,8 +40,9 @@ public class AddOperationTest {
 
         AddOperation add = new AddOperation();
         add.setListNumber(listNumber);
-        float result = add.execute();
-        Assert.assertEquals("Add not good", 5, result, 0.0);
+        add.execute();
+        Assert.assertEquals("Add not good",
+                5, add.getResult(), 0.0);
     }
 
     @After
