@@ -448,7 +448,6 @@ Opération n° 5 :  Sin(5.0) = 0.09
 Opération n° 6 :  Tan(5.0) = 0.09
 Opération n° 7 : 5.0 Mod 4.0 = 1.0
 Opération n° 8 : 5.0 Mod = 0.05
-
 2018-06-12 11:38:14 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
 2018-06-12 11:38:14 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1 - Addition
 2018-06-12 11:38:14 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2 - Soustraction

@@ -47,7 +47,7 @@ public class CosOperation extends AbstractOperation {
     @Override
     public final String toStringOperation() {
         LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
-        return " Cos(" + this.getListNumber().get(0) + ")"
+        return "Cos(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
 }

@@ -47,7 +47,7 @@ public class SinOperation extends AbstractOperation {
     @Override
     public final String toStringOperation() {
         LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
-        return " Sin(" + this.getListNumber().get(0) + ")"
+        return "Sin(" + this.getListNumber().get(0) + ")"
                + " = " + this.getResult();
     }
 }

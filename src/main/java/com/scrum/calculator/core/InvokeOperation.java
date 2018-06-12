@@ -75,13 +75,27 @@ public class InvokeOperation {
      */
     public final String toStringHistory() {
         LOGGER.debug(this.getClass().getName() + " - toStringHistory()");
-
         String result = "";
         for (int i = 0; i < this.history.size(); i++) {
-            result += "Opération n° " + i + " : "
+            result += "Op�ration n� " + i + " : "
                     + this.history.get(i).toStringOperation()
                     + System.lineSeparator();
         }
+        if (this.history.isEmpty()) {
+           result = "Aucun historique";
+        }
+        return result;
+    }
+
+    /**
+     * String of the history of operations.
+     * @return the string for an history
+     */
+    public final String clearHistory() {
+        LOGGER.debug(this.getClass().getName() + " - clearHistory()");
+        String result = "";
+        this.history.clear();
+        result = "Historique effacé";
         return result;
     }
 }

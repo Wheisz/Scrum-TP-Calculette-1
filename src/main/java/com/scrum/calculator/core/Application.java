@@ -98,6 +98,10 @@ public final class Application {
      */
     private static final int HISTORYNUMBER = 11;
     /**
+     * Value for clear history.
+     */
+    private static final int CLEARHISTORYNUMBER = 11;
+    /**
      * Value for leaving application.
      */
     private static final int LEAVENUMBER = 12;
@@ -119,6 +123,7 @@ public final class Application {
         while (userChoice != LEAVENUMBER) {
             // User choice
             UserInterface.displayMessage("Veuillez choisir une op�ration");
+
             UserInterface.displayMessage(ADDNUMBER + " - Addition");
             UserInterface.displayMessage(SUBNUMBER + " - Soustraction");
             UserInterface.displayMessage(MULTIPLYNUMBER + " - Mutliplication");
@@ -126,10 +131,12 @@ public final class Application {
             UserInterface.displayMessage(COSNUMBER + " - Cosinus");
             UserInterface.displayMessage(SINNUMBER + " - Sinus");
             UserInterface.displayMessage(TANNUMBER + " - Tangente");
-            UserInterface.displayMessage(MODNUMBER + " - Modulo");
-            UserInterface.displayMessage(MANUALFONCTION + " - Calcul libre");
+            UserInterface.displayMessage(MODNUMBER + " - Modulo");            
             UserInterface.displayMessage(PERCENTNUMBER + " - Percentage");
+            UserInterface.displayMessage(MANUALFONCTION + " - Calcul libre");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
+            UserInterface.displayMessage(CLEARHISTORYNUMBER + " - Effacer "
+                                                            + "Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
             userChoice = UserInterface.getIntFromUser();
@@ -214,6 +221,12 @@ public final class Application {
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");
             UserInterface.displayMessage(operations.toStringHistory());
+            break;
+
+        // Effacer Historique
+        case CLEARHISTORYNUMBER:
+            LOGGER.info("Application - doOperation : EffacerHistorique");
+            UserInterface.displayMessage(operations.clearHistory());
             break;
 
         default:
