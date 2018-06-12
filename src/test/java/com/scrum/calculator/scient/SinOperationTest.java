@@ -25,8 +25,8 @@ public class SinOperationTest {
 	        SinOperation sin = new SinOperation();
 	        sin.setListNumber(listNumber);
 	        sin.execute();
-//	        Assert.assertEquals("Add not good",
-//	                1, sin.getResult(), 0.0);
+	        Assert.assertEquals("Add not good",
+	                1, sin.getResult(), 0.0);
 	    }
 
 	    @After
