@@ -131,7 +131,7 @@ public final class Application {
             UserInterface.displayMessage(COSNUMBER + " - Cosinus");
             UserInterface.displayMessage(SINNUMBER + " - Sinus");
             UserInterface.displayMessage(TANNUMBER + " - Tangente");
-            UserInterface.displayMessage(MODNUMBER + " - Modulo");            
+            UserInterface.displayMessage(MODNUMBER + " - Modulo");
             UserInterface.displayMessage(PERCENTNUMBER + " - Percentage");
             UserInterface.displayMessage(MANUALFONCTION + " - Calcul libre");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
