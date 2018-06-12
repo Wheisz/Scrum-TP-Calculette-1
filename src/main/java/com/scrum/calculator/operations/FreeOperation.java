@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.scrum.calculator.freeopera;
+package com.scrum.calculator.operations;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.mariuszgromada.math.mxparser.Expression;

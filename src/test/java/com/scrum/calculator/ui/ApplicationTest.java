@@ -17,16 +17,42 @@
 package com.scrum.calculator.ui;
 
 import com.scrum.calculator.core.Application;
+import java.util.List;
+
+import org.junit.Assert;
+import org.junit.Before;
 import org.junit.Test;
 
 public class ApplicationTest {
 
-    @Test
-    public void test() {
-        UserInterface mockUi = new MockUserInterface();
-        Application app = new Application(mockUi);
+    private UserInterface mockUi;
+    private Application app;
 
-
+    @Before
+    public void setUp() {
+        mockUi = new MockUserInterface();
+        app = new Application(mockUi);
     }
 
+    @Test
+    public void testDoSetStringOperation() {
+       Assert.assertNotNull("The object should not be null", app.doSetStringOperation());
+    }
+
+    @Test
+    public void testGetChosenOperation() {
+        Assert.assertNotNull("The object should not be null", app.getChosenOperation(5));
+        
+        Assert.assertNull("The object should be null", app.getChosenOperation(89));
+    }
+    
+    @Test
+    public void testGetUserFloats(){
+        
+        List<Float> listOfFloat = app.getUserFloats(2);
+        
+        Assert.assertEquals("The size should be 2", 2,  listOfFloat.size());
+        
+        Assert.assertEquals("The value should be 2", "20.2", (listOfFloat.get(0).toString()));
+    }
 }

@@ -1,4 +1,4 @@
-package com.scrum.calculator.mod;
+package com.scrum.calculator.testoperations;
 
 import java.util.ArrayList;
 
@@ -7,7 +7,7 @@ import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.scrum.calculator.modulo.ModOperation;
+import com.scrum.calculator.operations.ModOperation;
 
 public class ModOperationTest {
 	@Before

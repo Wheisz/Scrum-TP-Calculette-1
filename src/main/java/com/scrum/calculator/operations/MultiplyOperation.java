@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.scrum.calculator.divide;
+package com.scrum.calculator.operations;
 
 import com.scrum.calculator.core.AbstractOperation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Class Divide operation.
+ * Class Multiply.
  * @author tsupio
  */
-public class DivideOperation extends AbstractOperation {
+public class MultiplyOperation extends AbstractOperation {
 
     /**
      * Logger.
@@ -34,37 +34,30 @@ public class DivideOperation extends AbstractOperation {
     /**
      * Constructor.
      */
-    public DivideOperation() {
+    public MultiplyOperation() {
         super();
         LOGGER.debug(this.getClass().getName() + " - Constructor");
     }
 
     /**
-     * Execute divide operation.
+     * Execute multiplication operation.
      */
     @Override
     public final void execute() throws ArithmeticException {
-        LOGGER.info(this.getClass().getName() + " - Exécution division");
+        LOGGER.info(this.getClass().getName() + " - Exécution multiplication");
         float result;
-        if (this.getListNumber().get(1) == 0) {
-            ArithmeticException arithEx = new ArithmeticException(
-                    "Division by zero is impossible. "
-                    + "Please change second value");
-            LOGGER.error(this.getClass().getName() + arithEx);
-            throw arithEx;
-        }
-        result = getListNumber().get(0) / getListNumber().get(1);
+        result = this.getListNumber().get(0) * this.getListNumber().get(1);
         this.setResult(result);
     }
 
     /**
-     * ToString of division.
-     * @return string of a division
+     * ToString of multiplication.
+     * @return string of a multiplication
      */
     @Override
     public final String toStringOperation() {
         LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
-        return this.getListNumber().get(0) + " / " + this.getListNumber().get(1)
+        return this.getListNumber().get(0) + " * " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }
 }

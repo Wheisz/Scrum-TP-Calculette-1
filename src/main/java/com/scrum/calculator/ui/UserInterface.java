@@ -16,13 +16,34 @@
 
 package com.scrum.calculator.ui;
 
+/**
+ * User interface class.
+ * @author Willy
+ *
+ */
 public interface UserInterface {
 
+    /**
+     * Display message.
+     * @param message the displayed message.
+     */
     void displayMessage(final String message);
 
+    /**
+     * Get Integer.
+     * @return interger
+     */
     int getIntFromUser();
 
+    /**
+     * get float.
+     * @return returned float
+     */
     float getFloatFromUser();
 
+    /**
+     * Return string.
+     * @return String from user
+     */
     String getStringFromUser();
 }

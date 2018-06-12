@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-package com.scrum.calculator.sub;
+package com.scrum.calculator.operations;
 
 import com.scrum.calculator.core.AbstractOperation;
 import org.apache.logging.log4j.LogManager;

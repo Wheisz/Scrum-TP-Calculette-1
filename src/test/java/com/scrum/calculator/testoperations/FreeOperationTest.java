@@ -14,12 +14,14 @@
  * limitations under the License.
  */
 
-package com.scrum.calculator.freeopera;
+package com.scrum.calculator.testoperations;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.scrum.calculator.operations.FreeOperation;
 
 import java.util.ArrayList;
 

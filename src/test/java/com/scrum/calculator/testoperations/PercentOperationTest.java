@@ -1,4 +1,4 @@
-package com.scrum.calculator.percent;
+package com.scrum.calculator.testoperations;
 
 import java.util.ArrayList;
 
@@ -6,6 +6,8 @@ import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.scrum.calculator.operations.PercentOperation;
 
 public class PercentOperationTest {
     @Before
