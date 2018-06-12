@@ -3,7 +3,7 @@ package com.scrum.calculator.percent;
 import com.scrum.calculator.core.AbstractOperation;
 
 /**
- * Class Subtraction.
+ * Class Percentage.
  * @author ida
  */
 public class PercentOperation  extends AbstractOperation {
@@ -16,7 +16,7 @@ public class PercentOperation  extends AbstractOperation {
     }
 
     /**
-     * Execute Modulo operation.
+     * Execute Percentage operation.
      */
     @Override
     public final void execute() {
@@ -26,12 +26,12 @@ public class PercentOperation  extends AbstractOperation {
     }
 
     /**
-     * ToString of Modulo operation.
-     * @return string of a modulo operation
+     * ToString of Percentage operation.
+     * @return string of a percentage operation
      */
     @Override
     public final String toStringOperation() {
-        return this.getListNumber().get(0) + " Mod = " + this.getResult();
+        return this.getListNumber().get(0) + "% = " + this.getResult();
     }
 }
 
