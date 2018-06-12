@@ -86,5 +86,15 @@ public final class UserInterface {
             UserInterface.displayMessage(errorMessage);
             return getFloatFromUser();
         }
+    }   
+
+    /**
+     * Ask the user to input a string.
+     * @return User string
+     */
+    public static String getStringFromUser(){
+        LOGGER.info("UserInerface - asking user for string");
+        
+        return reader.nextLine();
     }
 }
