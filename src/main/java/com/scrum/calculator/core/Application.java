@@ -99,9 +99,13 @@ public final class Application {
      */
     private static final int HISTORYNUMBER = 11;
     /**
+     * Value for clear history.
+     */
+    private static final int CLEARHISTORYNUMBER = 12;
+    /**
      * Value for leaving application.
      */
-    private static final int LEAVENUMBER = 12;
+    private static final int LEAVENUMBER = 13;
 
     /**
      * Constructor.
@@ -115,13 +119,12 @@ public final class Application {
     public static void main(final String[] args) {
 
         LOGGER.info("Application started");
-
         int userChoice = 0;
-        final int LEAVE_NUMBER = LEAVENUMBER;
 
-        while (userChoice != LEAVE_NUMBER) {
+        while (userChoice != LEAVENUMBER) {
             // User choice
             UserInterface.displayMessage("Veuillez choisir une op�ration");
+
             UserInterface.displayMessage(ADDNUMBER + " - Addition");
             UserInterface.displayMessage(SUBNUMBER + " - Soustraction");
             UserInterface.displayMessage(MULTIPLYNUMBER + " - Mutliplication");
@@ -133,10 +136,12 @@ public final class Application {
             UserInterface.displayMessage(PERCENTNUMBER + " - Percentage");
             UserInterface.displayMessage(MANUALFONCTION + " - Calcul libre");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
+            UserInterface.displayMessage(CLEARHISTORYNUMBER + " - Effacer "
+                                                            + "Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
             userChoice = UserInterface.getIntFromUser();
-            if (userChoice != LEAVE_NUMBER) {
+            if (userChoice != LEAVENUMBER) {
                 doOperation(userChoice);
             }
         }
@@ -210,16 +215,22 @@ public final class Application {
             // Percent
         case MANUALFONCTION:
             LOGGER.info("Application - doOperation : Free operation");
-
+            
             while (operation == null) {
                 operation = doSetStringOperation();
             }
             break;
-
-            // Historique
+                                   
+        // Historique
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");
             UserInterface.displayMessage(operations.toStringHistory());
+            break;
+
+        // Effacer Historique
+        case CLEARHISTORYNUMBER:
+            LOGGER.info("Application - doOperation : EffacerHistorique");
+            UserInterface.displayMessage(operations.clearHistory());
             break;
 
         default:

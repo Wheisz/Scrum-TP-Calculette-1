@@ -50,7 +50,8 @@ public final class UserInterface {
      * @param message to display.
      */
     public static void displayMessage(final String message) {
-        LOGGER.debug("UserInterface - displayMessage : " + message);
+        LOGGER.debug(UserInterface.class.getName()
+                + " - displayMessage : " + message);
         System.out.println(message);
     }
 
@@ -60,12 +61,17 @@ public final class UserInterface {
      */
     public static int getIntFromUser() {
         try {
-            LOGGER.info("UserInterface - asking user for int");
+            LOGGER.info(UserInterface.class.getName()
+                    + " - asking user for int");
+
             return Integer.parseInt(reader.nextLine());
         } catch (NumberFormatException e) {
             String errorMessage =
                     "Veuillez saisir une valeur valide : un entier";
-            LOGGER.error("UserInterface - " + errorMessage, e);
+
+            LOGGER.error(UserInterface.class.getName()
+                    + " - " + errorMessage, e);
+
             UserInterface.displayMessage(errorMessage);
             return getIntFromUser();
         }
@@ -77,12 +83,17 @@ public final class UserInterface {
      */
     public static float getFloatFromUser() {
         try {
-            LOGGER.info("UserInterface - asking user for float");
+            LOGGER.info(UserInterface.class.getName()
+                    + "  - asking user for float");
+
             return Float.parseFloat(reader.nextLine());
         } catch (NumberFormatException e) {
             String errorMessage =
                     "Veuillez saisir une valeur valide : un float";
-            LOGGER.error("UserInterface - " + errorMessage, e);
+
+            LOGGER.error(UserInterface.class.getName()
+                    + " - " + errorMessage, e);
+
             UserInterface.displayMessage(errorMessage);
             return getFloatFromUser();
         }
@@ -93,8 +104,10 @@ public final class UserInterface {
      * @return User string
      */
     public static String getStringFromUser() {
-        LOGGER.info("UserInerface - asking user for string");
+        LOGGER.info(UserInterface.class.getName()
+                + " - asking user for string");
         displayMessage("Veuillez saisir une chaine de calcul valide :");
+
         return reader.nextLine();
     }
 }
