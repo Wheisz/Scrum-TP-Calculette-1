@@ -16,6 +16,9 @@
 
 package com.scrum.calculator.ui;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.Scanner;
 
 /**
@@ -26,6 +29,11 @@ import java.util.Scanner;
 public final class UserInterface {
 
     /**
+     * Logger.
+     */
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    /**
      * Scanner to get user values.
      */
     private static Scanner reader = new Scanner(System.in);
@@ -33,13 +41,16 @@ public final class UserInterface {
     /**
      * Private class.
      */
-    private UserInterface() { };
+    private UserInterface() {
+        LOGGER.debug(this.getClass().getName() + " - Constructor");
+    }
 
     /**
      * Display a message to the user.
      * @param message to display.
      */
     public static void displayMessage(final String message) {
+        LOGGER.debug("UserInterface - displayMessage : " + message);
         System.out.println(message);
     }
 
@@ -49,9 +60,13 @@ public final class UserInterface {
      */
     public static int getIntFromUser() {
         try {
+            LOGGER.info("UserInterface - asking user for int");
             return Integer.parseInt(reader.nextLine());
         } catch (NumberFormatException e) {
-            UserInterface.displayMessage("Veuillez saisir une valeur valide.");
+            final String errorMessage =
+                    "Veuillez saisir une valeur valide : un entier";
+            LOGGER.error("UserInterface - " + errorMessage, e);
+            UserInterface.displayMessage(errorMessage);
             return getIntFromUser();
         }
     }
@@ -62,9 +77,13 @@ public final class UserInterface {
      */
     public static float getFloatFromUser() {
         try {
+            LOGGER.info("UserInterface - asking user for float");
             return Float.parseFloat(reader.nextLine());
         } catch (NumberFormatException e) {
-            UserInterface.displayMessage("Veuillez saisir une valeur valide.");
+            final String errorMessage =
+                    "Veuillez saisir une valeur valide : un entier";
+            LOGGER.error("UserInterface - " + errorMessage, e);
+            UserInterface.displayMessage(errorMessage);
             return getFloatFromUser();
         }
     }

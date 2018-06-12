@@ -17,6 +17,8 @@
 package com.scrum.calculator.multiply;
 
 import com.scrum.calculator.core.AbstractOperation;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Class Multiply.
@@ -25,10 +27,24 @@ import com.scrum.calculator.core.AbstractOperation;
 public class MultiplyOperation extends AbstractOperation {
 
     /**
+     * Logger.
+     */
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    /**
+     * Constructor.
+     */
+    public MultiplyOperation() {
+        super();
+        LOGGER.debug(this.getClass().getName() + " - Constructor");
+    }
+
+    /**
      * Execute multiplication operation.
      */
     @Override
     public final void execute() throws ArithmeticException {
+        LOGGER.info(this.getClass().getName() + " - Exécution multiplication");
         float result;
         result = this.getListNumber().get(0) * this.getListNumber().get(1);
         this.setResult(result);
@@ -40,6 +56,7 @@ public class MultiplyOperation extends AbstractOperation {
      */
     @Override
     public final String toStringOperation() {
+        LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
         return this.getListNumber().get(0) + " * " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }
