@@ -100,11 +100,11 @@ public final class Application {
     /**
      * Value for clear history.
      */
-    private static final int CLEARHISTORYNUMBER = 11;
+    private static final int CLEARHISTORYNUMBER = 12;
     /**
      * Value for leaving application.
      */
-    private static final int LEAVENUMBER = 12;
+    private static final int LEAVENUMBER = 13;
 
     /**
      * Constructor.
