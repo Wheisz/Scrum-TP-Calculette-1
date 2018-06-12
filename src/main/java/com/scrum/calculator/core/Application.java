@@ -90,9 +90,13 @@ public final class Application {
      */
     private static final int PERCENTNUMBER = 9;
     /**
+     * Value for manual fonction.
+     */
+    private static final int MANUALFONCTION = 10;
+    /**
      * Value for history.
      */
-    private static final int HISTORYNUMBER = 10;
+    private static final int HISTORYNUMBER = 11;
     /**
      * Value for clear history.
      */
@@ -114,29 +118,29 @@ public final class Application {
     public static void main(final String[] args) {
 
         LOGGER.info("Application started");
-
         int userChoice = 0;
-        final int LEAVE_NUMBER = LEAVENUMBER;
 
-        while (userChoice != LEAVE_NUMBER) {
+        while (userChoice != LEAVENUMBER) {
             // User choice
             UserInterface.displayMessage("Veuillez choisir une op�ration");
-            UserInterface.displayMessage(ADDNUMBER + "  - Addition");
-            UserInterface.displayMessage(SUBNUMBER + "  - Soustraction");
-            UserInterface.displayMessage(MULTIPLYNUMBER + "  - Mutliplication");
-            UserInterface.displayMessage(DIVIDENUMBER + "  - Division");
-            UserInterface.displayMessage(COSNUMBER + "  - Cosinus");
-            UserInterface.displayMessage(SINNUMBER + "  - Sinus");
-            UserInterface.displayMessage(TANNUMBER + "  - Tangente");
-            UserInterface.displayMessage(MODNUMBER + "  - Modulo");
-            UserInterface.displayMessage(PERCENTNUMBER + "  - Pourcentage");
+
+            UserInterface.displayMessage(ADDNUMBER + " - Addition");
+            UserInterface.displayMessage(SUBNUMBER + " - Soustraction");
+            UserInterface.displayMessage(MULTIPLYNUMBER + " - Mutliplication");
+            UserInterface.displayMessage(DIVIDENUMBER + " - Division");
+            UserInterface.displayMessage(COSNUMBER + " - Cosinus");
+            UserInterface.displayMessage(SINNUMBER + " - Sinus");
+            UserInterface.displayMessage(TANNUMBER + " - Tangente");
+            UserInterface.displayMessage(MODNUMBER + " - Modulo");            
+            UserInterface.displayMessage(PERCENTNUMBER + " - Percentage");
+            UserInterface.displayMessage(MANUALFONCTION + " - Calcul libre");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
             UserInterface.displayMessage(CLEARHISTORYNUMBER + " - Effacer "
                                                             + "Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
             userChoice = UserInterface.getIntFromUser();
-            if (userChoice != LEAVE_NUMBER) {
+            if (userChoice != LEAVENUMBER) {
                 doOperation(userChoice);
             }
         }
@@ -204,6 +208,12 @@ public final class Application {
         // Percent
         case PERCENTNUMBER:
             LOGGER.info("Application - doOperation : Percent");
+            operation = new PercentOperation();
+            break;
+
+        // Percent
+        case MANUALFONCTION:
+            LOGGER.info("Application - doOperation : Free operation");
             operation = new PercentOperation();
             break;
 

@@ -11,6 +11,11 @@ import org.apache.logging.log4j.Logger;
 public class CosOperation extends AbstractOperation {
 
     /**
+     * Value of div.
+     */
+    private static final double DIV = 100.0;
+
+    /**
      * Logger.
      */
     private static final Logger LOGGER = LogManager.getLogger();
@@ -29,11 +34,10 @@ public class CosOperation extends AbstractOperation {
      */
     @Override
     public final void execute() {
-        LOGGER.info(this.getClass().getName() + " - Exécution cosinus");
-        double div = 100.0;
+        LOGGER.info(this.getClass().getName() + " - ExÃ©cution cosinus");
         double result = Math.cos(Math.toRadians(
         this.getListNumber().get(0)));
-        this.setResult((float) (Math.round(result * div) / div));
+        this.setResult((float) (Math.round(result * DIV) / DIV));
     }
 
     /**
