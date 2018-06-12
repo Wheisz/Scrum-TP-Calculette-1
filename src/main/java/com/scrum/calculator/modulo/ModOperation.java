@@ -1,17 +1,26 @@
 package com.scrum.calculator.modulo;
 
 import com.scrum.calculator.core.AbstractOperation;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
- * Class Subtraction.
+ * Class Modulo.
  * @author ida
  */
 public class ModOperation extends AbstractOperation {
+
+    /**
+     * Logger.
+     */
+    private static final Logger LOGGER = LogManager.getLogger();
+
     /**
      * Constructor.
      */
     public ModOperation() {
         super();
+        LOGGER.debug("Constructor");
     }
 
     /**
@@ -19,6 +28,7 @@ public class ModOperation extends AbstractOperation {
      */
     @Override
     public final void execute() throws ArithmeticException {
+        LOGGER.info(this.getClass().getName() + " - Exécution modulo");
         float result;
         if (this.getListNumber().get(1) == 0) {
              throw new ArithmeticException("Division by zero is impossible. "
@@ -34,6 +44,7 @@ public class ModOperation extends AbstractOperation {
      */
     @Override
     public final String toStringOperation() {
+        LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
         return this.getListNumber().get(0) + " Mod "
              + this.getListNumber().get(1)
                + " = " + this.getResult();
