@@ -5,5 +5,5 @@ doc/
 out/
 .classpath
 .project
-log/
+log/**
 /log/Calculator.log
