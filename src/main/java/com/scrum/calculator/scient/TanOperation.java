@@ -1,6 +1,8 @@
 package com.scrum.calculator.scient;
 
 import com.scrum.calculator.core.AbstractOperation;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Class Subtraction.

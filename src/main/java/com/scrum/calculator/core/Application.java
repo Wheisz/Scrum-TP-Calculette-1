@@ -23,7 +23,9 @@ package com.scrum.calculator.core;
 
 import com.scrum.calculator.add.AddOperation;
 import com.scrum.calculator.divide.DivideOperation;
+import com.scrum.calculator.modulo.ModOperation;
 import com.scrum.calculator.multiply.MultiplyOperation;
+import com.scrum.calculator.percent.PercentOperation;
 import com.scrum.calculator.scient.CosOperation;
 import com.scrum.calculator.scient.SinOperation;
 import com.scrum.calculator.scient.TanOperation;
@@ -189,11 +191,13 @@ public final class Application {
 
         // Modulo
         case MODNUMBER:
+            LOGGER.info("Application - doOperation : Modulo");
             operation = new ModOperation();
             break;
 
         // Percent
         case PERCENTNUMBER:
+            LOGGER.info("Application - doOperation : Percent");
             operation = new PercentOperation();
             break;
 
