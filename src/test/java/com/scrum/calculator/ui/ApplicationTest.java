@@ -16,13 +16,17 @@
 
 package com.scrum.calculator.ui;
 
-public interface UserInterface {
+import com.scrum.calculator.core.Application;
+import org.junit.Test;
 
-    void displayMessage(final String message);
+public class ApplicationTest {
 
-    int getIntFromUser();
+    @Test
+    public void test() {
+        UserInterface mockUi = new MockUserInterface();
+        Application app = new Application(mockUi);
 
-    float getFloatFromUser();
 
-    String getStringFromUser();
+    }
+
 }

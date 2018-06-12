@@ -31,7 +31,9 @@ import com.scrum.calculator.scient.CosOperation;
 import com.scrum.calculator.scient.SinOperation;
 import com.scrum.calculator.scient.TanOperation;
 import com.scrum.calculator.sub.SubOperation;
+import com.scrum.calculator.ui.ConsoleUserInterface;
 import com.scrum.calculator.ui.UserInterface;
+import com.scrum.calculator.ui.WebUserInterface;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
@@ -107,40 +109,53 @@ public final class Application {
      */
     private static final int LEAVENUMBER = 13;
 
+    private UserInterface userInterface;
+
     /**
      * Constructor.
      */
-    private Application() { };
+    public Application(UserInterface userInterface) {
+        this.userInterface = userInterface;
+    }
 
     /**
      * Main method.
      * @param args String table.
      */
     public static void main(final String[] args) {
+        UserInterface ui = new ConsoleUserInterface();
+        //UserInterface ui = new WebUserInterface();
 
+        Application app = new Application(ui);
+        app.run();
+    }
+
+    public void run() {
         LOGGER.info("Application started");
         int userChoice = 0;
 
         while (userChoice != LEAVENUMBER) {
             // User choice
-            UserInterface.displayMessage("Veuillez choisir une op�ration");
+            this.userInterface.displayMessage("Veuillez choisir une op�ration");
 
-            UserInterface.displayMessage(ADDNUMBER + " - Addition");
-            UserInterface.displayMessage(SUBNUMBER + " - Soustraction");
-            UserInterface.displayMessage(MULTIPLYNUMBER + " - Mutliplication");
-            UserInterface.displayMessage(DIVIDENUMBER + " - Division");
-            UserInterface.displayMessage(COSNUMBER + " - Cosinus");
-            UserInterface.displayMessage(SINNUMBER + " - Sinus");
-            UserInterface.displayMessage(TANNUMBER + " - Tangente");
-            UserInterface.displayMessage(MODNUMBER + " - Modulo");
-            UserInterface.displayMessage(PERCENTNUMBER + " - Percentage");
-            UserInterface.displayMessage(MANUALFONCTION + " - Calcul libre");
-            UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
-            UserInterface.displayMessage(CLEARHISTORYNUMBER + " - Effacer "
-                                                            + "Historique");
-            UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
+            this.userInterface.displayMessage(ADDNUMBER + " - Addition");
+            this.userInterface.displayMessage(SUBNUMBER + " - Soustraction");
+            this.userInterface.displayMessage(
+                    MULTIPLYNUMBER + " - Mutliplication");
+            this.userInterface.displayMessage(DIVIDENUMBER + " - Division");
+            this.userInterface.displayMessage(COSNUMBER + " - Cosinus");
+            this.userInterface.displayMessage(SINNUMBER + " - Sinus");
+            this.userInterface.displayMessage(TANNUMBER + " - Tangente");
+            this.userInterface.displayMessage(MODNUMBER + " - Modulo");
+            this.userInterface.displayMessage(PERCENTNUMBER + " - Percentage");
+            this.userInterface.displayMessage(
+                    MANUALFONCTION + " - Calcul libre");
+            this.userInterface.displayMessage(HISTORYNUMBER + " - Historique");
+            this.userInterface.displayMessage(CLEARHISTORYNUMBER + " - Effacer "
+                    + "Historique");
+            this.userInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
-            userChoice = UserInterface.getIntFromUser();
+            userChoice = this.userInterface.getIntFromUser();
             if (userChoice != LEAVENUMBER) {
                 doOperation(userChoice);
             }
@@ -154,7 +169,7 @@ public final class Application {
      * @param operationNumber Operation to do.
      */
     @SuppressWarnings({"PMD.NullAssignment", "PMD.LawOfDemeter"})
-    private static void doOperation(final int operationNumber) {
+    private void doOperation(final int operationNumber) {
 
         AbstractOperation operation = null;
 
@@ -224,18 +239,18 @@ public final class Application {
         // Historique
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");
-            UserInterface.displayMessage(operations.toStringHistory());
+            this.userInterface.displayMessage(operations.toStringHistory());
             break;
 
         // Effacer Historique
         case CLEARHISTORYNUMBER:
             LOGGER.info("Application - doOperation : EffacerHistorique");
-            UserInterface.displayMessage(operations.clearHistory());
+            this.userInterface.displayMessage(operations.clearHistory());
             break;
 
         default:
             LOGGER.info("Application - doOperation : inconnue");
-            UserInterface.displayMessage("Cette opération n'existe pas.");
+            this.userInterface.displayMessage("Cette opération n'existe pas.");
             operation = null;
             break;
         }
@@ -244,8 +259,8 @@ public final class Application {
             final ArrayList<Float> listOfFloat = new ArrayList<>();
 
             for (int i = 1; i <= operation.getNumberOfParams(); i++) {
-                UserInterface.displayMessage("Entrez la valeur :" + i);
-                listOfFloat.add(UserInterface.getFloatFromUser());
+                this.userInterface.displayMessage("Entrez la valeur :" + i);
+                listOfFloat.add(this.userInterface.getFloatFromUser());
             }
 
             operation.setListNumber(listOfFloat);
@@ -256,7 +271,7 @@ public final class Application {
                         + operation.getClass().getName());
 
                 operations.storeAndExecute(operation);
-                UserInterface.displayMessage(
+                this.userInterface.displayMessage(
                         "Le résultat est : " + operation.getResult());
 
             } catch (ArithmeticException e) {
@@ -265,7 +280,7 @@ public final class Application {
                         + operation.getClass().getName()
                         + "message error = " + e.getMessage(), e);
 
-                UserInterface.displayMessage(e.getMessage());
+                this.userInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
             }
         }
@@ -275,17 +290,17 @@ public final class Application {
      * Do the free operation while the user input a valid string.
      * @return AbstractOpeartion casted
      */
-    private static AbstractOperation doSetStringOperation() {
+    private AbstractOperation doSetStringOperation() {
         FreeOperation freeOpe = new FreeOperation();
 
         try {
-            freeOpe.setStringCalc(UserInterface.getStringFromUser());
+            freeOpe.setStringCalc(this.userInterface.getStringFromUser());
         } catch (ArithmeticException e) {
             LOGGER.info("Application - doOperation - failed "
                     + "manual fonction operation : "
                     + freeOpe.getClass().getName()
                     + e.getMessage());
-            UserInterface.displayMessage(e.getMessage());
+            this.userInterface.displayMessage(e.getMessage());
             return null;
         }
 

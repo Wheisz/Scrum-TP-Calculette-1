@@ -16,13 +16,24 @@
 
 package com.scrum.calculator.ui;
 
-public interface UserInterface {
+public class WebUserInterface implements UserInterface {
+    @Override
+    public void displayMessage(String message) {
 
-    void displayMessage(final String message);
+    }
 
-    int getIntFromUser();
+    @Override
+    public int getIntFromUser() {
+        return 0;
+    }
 
-    float getFloatFromUser();
+    @Override
+    public float getFloatFromUser() {
+        return 0;
+    }
 
-    String getStringFromUser();
+    @Override
+    public String getStringFromUser() {
+        return null;
+    }
 }

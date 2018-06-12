@@ -16,13 +16,28 @@
 
 package com.scrum.calculator.ui;
 
-public interface UserInterface {
+public class MockUserInterface implements UserInterface {
 
-    void displayMessage(final String message);
+    private boolean isDicplay;
 
-    int getIntFromUser();
+    @Override
+    public void displayMessage(String message) {
+        this.isDicplay = true;
+    }
 
-    float getFloatFromUser();
+    @Override
+    public int getIntFromUser() {
+        return 10;
+    }
 
-    String getStringFromUser();
+    @Override
+    public float getFloatFromUser() {
+        return 20.2f;
+    }
+
+    @Override
+    public String getStringFromUser() {
+        return "10 + 10";
+    }
+
 }
