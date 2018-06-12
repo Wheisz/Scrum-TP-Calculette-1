@@ -81,7 +81,7 @@ public final class UserInterface {
             return Float.parseFloat(reader.nextLine());
         } catch (NumberFormatException e) {
             final String errorMessage =
-                    "Veuillez saisir une valeur valide : un entier";
+                    "Veuillez saisir une valeur valide : un float";
             LOGGER.error("UserInterface - " + errorMessage, e);
             UserInterface.displayMessage(errorMessage);
             return getFloatFromUser();
