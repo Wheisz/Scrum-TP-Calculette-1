@@ -23,9 +23,7 @@ package com.scrum.calculator.core;
 
 import com.scrum.calculator.add.AddOperation;
 import com.scrum.calculator.divide.DivideOperation;
-import com.scrum.calculator.modulo.ModOperation;
 import com.scrum.calculator.multiply.MultiplyOperation;
-import com.scrum.calculator.percent.PercentOperation;
 import com.scrum.calculator.scient.CosOperation;
 import com.scrum.calculator.scient.SinOperation;
 import com.scrum.calculator.scient.TanOperation;
@@ -44,7 +42,7 @@ import java.util.ArrayList;
 public final class Application {
 
     /**
-     * Logger for Application class.
+     * Logger.
      */
     private static final Logger LOGGER = LogManager.getLogger();
 
@@ -116,7 +114,7 @@ public final class Application {
 
         while (userChoice != LEAVE_NUMBER) {
             // User choice
-            UserInterface.displayMessage("Veuillez choisir une opération");
+            UserInterface.displayMessage("Veuillez choisir une opï¿½ration");
             UserInterface.displayMessage(ADDNUMBER + " - Addition");
             UserInterface.displayMessage(SUBNUMBER + " - Soustraction");
             UserInterface.displayMessage(MULTIPLYNUMBER + " - Mutliplication");
@@ -150,35 +148,42 @@ public final class Application {
         switch (operationNumber) {
         // Addition
         case ADDNUMBER:
+            LOGGER.info("Application - doOperation : Addition");
             operation = new AddOperation();
             break;
         // Soustraction
         case SUBNUMBER:
+            LOGGER.info("Application - doOperation : Soustraction");
             operation = new SubOperation();
             break;
 
         // Multiplication
         case MULTIPLYNUMBER:
+            LOGGER.info("Application - doOperation : Multiplication");
             operation = new MultiplyOperation();
             break;
 
         // Division
         case DIVIDENUMBER:
+            LOGGER.info("Application - doOperation : Division");
             operation = new DivideOperation();
             break;
 
         // Cosinus
         case COSNUMBER:
+            LOGGER.info("Application - doOperation : Cosinus");
             operation = new CosOperation();
             break;
 
         // Sinus
         case SINNUMBER:
+            LOGGER.info("Application - doOperation : Sinus");
             operation = new SinOperation();
             break;
 
         // Tangente
         case TANNUMBER:
+            LOGGER.info("Application - doOperation : Tangente");
             operation = new TanOperation();
             break;
 
@@ -194,11 +199,13 @@ public final class Application {
 
         // Historique
         case HISTORYNUMBER:
+            LOGGER.info("Application - doOperation : Historique");
             UserInterface.displayMessage(operations.toStringHistory());
             break;
 
         default:
-            UserInterface.displayMessage("Cette opération n'existe pas.");
+            LOGGER.info("Application - doOperation : inconnue");
+            UserInterface.displayMessage("Cette opÃ©ration n'existe pas.");
             operation = null;
             break;
         }
@@ -207,7 +214,6 @@ public final class Application {
             final ArrayList<Float> listOfFloat = new ArrayList<>();
 
             for (int i = 1; i <= operation.getNumberOfParams(); i++) {
-
                 UserInterface.displayMessage("Entrez la valeur :" + i);
                 listOfFloat.add(UserInterface.getFloatFromUser());
             }
@@ -215,10 +221,20 @@ public final class Application {
             operation.setListNumber(listOfFloat);
 
             try {
+                LOGGER.info("Application - doOperation - trying "
+                        + "storeAndExecute operation : "
+                        + operation.getClass().getName());
+
                 operations.storeAndExecute(operation);
                 UserInterface.displayMessage(
-                        "Le rï¿½sultat est : " + operation.getResult());
+                        "Le rÃ©sultat est : " + operation.getResult());
+
             } catch (ArithmeticException e) {
+                LOGGER.error("Application - doOperation - failed "
+                        + "storeAndExecute operation : "
+                        + operation.getClass().getName()
+                        + "message error = " + e.getMessage(), e);
+
                 UserInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
             }
