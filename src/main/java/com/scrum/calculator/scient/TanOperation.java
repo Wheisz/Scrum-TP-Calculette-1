@@ -19,7 +19,7 @@ public class TanOperation extends AbstractOperation {
      * Execute Tan operation.
      */
     @Override
-    public final void execute() throws ArithmeticException{
+    public final void execute() {
         double div = 100.0;
         double result = Math.tan(Math.toRadians(
         this.getListNumber().get(0)));

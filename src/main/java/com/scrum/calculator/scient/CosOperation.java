@@ -22,7 +22,7 @@ public class CosOperation extends AbstractOperation {
     public final void execute() {
         double div = 100.0;
         double result = Math.cos(Math.toRadians(
-        this.getListNumber().get(0)));        
+        this.getListNumber().get(0)));
         this.setResult((float) (Math.round(result * div) / div));
     }
 
