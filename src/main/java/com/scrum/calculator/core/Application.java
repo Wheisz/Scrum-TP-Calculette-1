@@ -204,14 +204,17 @@ public final class Application {
                 LOGGER.info("Application - doOperation - trying "
                         + "storeAndExecute operation : "
                         + operation.getClass().getName());
+
                 operations.storeAndExecute(operation);
                 UserInterface.displayMessage(
                         "Le résultat est : " + operation.getResult());
+
             } catch (ArithmeticException e) {
                 LOGGER.error("Application - doOperation - failed "
                         + "storeAndExecute operation : "
                         + operation.getClass().getName()
                         + "message error = " + e.getMessage(), e);
+
                 UserInterface.displayMessage(e.getMessage());
                 doOperation(operationNumber);
             }

@@ -51,10 +51,13 @@ public class InvokeOperation {
      * @param operation Operation to store and execute
      */
     public final void storeAndExecute(final AbstractOperation operation) {
-        LOGGER.info("storeAndExecute operation - "
+
+        LOGGER.info(this.getClass().getName()
+                + "storeAndExecute operation : "
                 + operation.getClass().getName());
-        this.history.add(operation);
+
         operation.execute();
+        this.history.add(operation);
     }
 
     /**
@@ -72,6 +75,7 @@ public class InvokeOperation {
      */
     public final String toStringHistory() {
         LOGGER.debug(this.getClass().getName() + " - toStringHistory()");
+
         String result = "";
         for (int i = 0; i < this.history.size(); i++) {
             result += "Opération n° " + i + " : "
