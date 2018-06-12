@@ -23,6 +23,7 @@ package com.scrum.calculator.core;
 
 import com.scrum.calculator.add.AddOperation;
 import com.scrum.calculator.divide.DivideOperation;
+import com.scrum.calculator.freeopera.FreeOperation;
 import com.scrum.calculator.modulo.ModOperation;
 import com.scrum.calculator.multiply.MultiplyOperation;
 import com.scrum.calculator.percent.PercentOperation;
@@ -163,60 +164,63 @@ public final class Application {
             LOGGER.info("Application - doOperation : Addition");
             operation = new AddOperation();
             break;
-        // Soustraction
+            // Soustraction
         case SUBNUMBER:
             LOGGER.info("Application - doOperation : Soustraction");
             operation = new SubOperation();
             break;
 
-        // Multiplication
+            // Multiplication
         case MULTIPLYNUMBER:
             LOGGER.info("Application - doOperation : Multiplication");
             operation = new MultiplyOperation();
             break;
 
-        // Division
+            // Division
         case DIVIDENUMBER:
             LOGGER.info("Application - doOperation : Division");
             operation = new DivideOperation();
             break;
 
-        // Cosinus
+            // Cosinus
         case COSNUMBER:
             LOGGER.info("Application - doOperation : Cosinus");
             operation = new CosOperation();
             break;
 
-        // Sinus
+            // Sinus
         case SINNUMBER:
             LOGGER.info("Application - doOperation : Sinus");
             operation = new SinOperation();
             break;
 
-        // Tangente
+            // Tangente
         case TANNUMBER:
             LOGGER.info("Application - doOperation : Tangente");
             operation = new TanOperation();
             break;
 
-        // Modulo
+            // Modulo
         case MODNUMBER:
             LOGGER.info("Application - doOperation : Modulo");
             operation = new ModOperation();
             break;
 
-        // Percent
+            // Percent
         case PERCENTNUMBER:
             LOGGER.info("Application - doOperation : Percent");
             operation = new PercentOperation();
             break;
 
-        // Percent
+            // Percent
         case MANUALFONCTION:
             LOGGER.info("Application - doOperation : Free operation");
-            operation = new PercentOperation();
+            
+            while (operation == null) {
+                operation = doSetStringOperation();
+            }
             break;
-
+                                   
         // Historique
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");
@@ -265,5 +269,27 @@ public final class Application {
                 doOperation(operationNumber);
             }
         }
+    }
+
+    /**
+     * Do the free operation while the user input a valid string.
+     * @return AbstractOpeartion casted
+     */
+    private static AbstractOperation doSetStringOperation() {
+        FreeOperation freeOpe = new FreeOperation();
+
+        try {
+            freeOpe.setStringCalc(UserInterface.getStringFromUser());
+        } catch (ArithmeticException e) {
+            LOGGER.info("Application - doOperation - failed "
+                    + "manual fonction operation : "
+                    + freeOpe.getClass().getName()
+                    + e.getMessage());
+            UserInterface.displayMessage(e.getMessage());
+            return null;
+        }
+
+
+        return (AbstractOperation) freeOpe;
     }
 }

@@ -106,6 +106,7 @@ public final class UserInterface {
     public static String getStringFromUser() {
         LOGGER.info(UserInterface.class.getName()
                 + " - asking user for string");
+        displayMessage("Veuillez saisir une chaine de calcul valide :");
 
         return reader.nextLine();
     }

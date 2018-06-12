@@ -15,13 +15,14 @@
  */
 
 package com.scrum.calculator.freeopera;
-
-import com.scrum.calculator.core.AbstractOperation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
+import org.mariuszgromada.math.mxparser.Expression;
+
+import com.scrum.calculator.core.AbstractOperation;
 
 /**
- * Class Addition.
+ * Class free opeartion.
  * @author tsupio
  */
 public class FreeOperation extends AbstractOperation {
@@ -32,31 +33,55 @@ public class FreeOperation extends AbstractOperation {
     private static final Logger LOGGER = LogManager.getLogger();
 
     /**
+     * Expression calcul.
+     */
+    private Expression expression;
+
+    /**
      * Constructor.
      */
     public FreeOperation() {
         super();
+        super.setNumberOfParams(0);
         LOGGER.debug(this.getClass().getName() + " - Constructor");
     }
 
     /**
-     * Execute Add operation.
-     */
-    @Override
-    public final void execute() throws ArithmeticException {
-        LOGGER.info(this.getClass().getName()
-                + " - Exécution addition");
-
-        this.setResult(0);
-    }
-
-    /**
-     * ToString of addition.
-     * @return string of an addition
+     * ToString of free operation.
+     * @return string of an free operation
      */
     @Override
     public final String toStringOperation() {
         LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
-        return "0";
+        return this.expression.getExpressionString()
+                + " = " + Double.toString(this.getResult());
+    }
+
+    /**
+     * Execute the main method.
+     */
+    @Override
+    public final void execute() {
+        LOGGER.info(this.getClass().getName()
+                + " - Exécution free operation");
+
+        super.setResult(Float.parseFloat
+                (Double.toString(expression.calculate())));
+    }
+
+    /**
+     * Set the string calcul.
+     * @param calcString String to define
+     * @throws ArithmeticException cannot execute calcul
+     */
+    public final void setStringCalc(final String calcString)
+            throws ArithmeticException {
+        this.expression = new Expression(calcString);
+
+        if (!expression.checkSyntax()) {
+            ArithmeticException arithEx = new ArithmeticException(
+                    "Chaine de calcul incorrecte.");
+            throw arithEx;
+        }
     }
 }
