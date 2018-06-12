@@ -447,3 +447,249 @@ Op�ration n� 2 :  Tan(8.0) = 0.14
 2018-06-12 11:57:22 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
 2018-06-12 11:57:22 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
 2018-06-12 11:57:22 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 11:57:34 [main] INFO  Application:217 - Application - doOperation : ClearHistorique
+2018-06-12 11:57:34 [main] DEBUG InvokeOperation:97 - com.scrum.calculator.core.InvokeOperation - clearHistory()
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Historique effac�
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1 - Addition
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2 - Soustraction
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3 - Mutliplication
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4 - Division
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5 - Cosinus
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6 - Sinus
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7 - Tangente
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8 - Modulo
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9 - Pourcentage
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
+2018-06-12 11:57:34 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 11:57:34 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 11:57:38 [main] INFO  Application:211 - Application - doOperation : Historique
+2018-06-12 11:57:38 [main] DEBUG InvokeOperation:77 - com.scrum.calculator.core.InvokeOperation - toStringHistory()
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Aucun historique
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1 - Addition
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2 - Soustraction
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3 - Mutliplication
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4 - Division
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5 - Cosinus
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6 - Sinus
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7 - Tangente
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8 - Modulo
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9 - Pourcentage
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
+2018-06-12 11:57:38 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 11:57:38 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 11:57:42 [main] INFO  Application:163 - Application - doOperation : Soustraction
+2018-06-12 11:57:42 [main] DEBUG SubOperation:39 - Constructor
+2018-06-12 11:57:42 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Entrez la valeur :1
+2018-06-12 11:57:42 [main] INFO  UserInterface:80 - UserInterface - asking user for float
+2018-06-12 11:57:48 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Entrez la valeur :2
+2018-06-12 11:57:48 [main] INFO  UserInterface:80 - UserInterface - asking user for float
+2018-06-12 11:57:49 [main] INFO  Application:239 - Application - doOperation - trying storeAndExecute operation : com.scrum.calculator.sub.SubOperation
+2018-06-12 11:57:49 [main] INFO  InvokeOperation:55 - com.scrum.calculator.core.InvokeOperationstoreAndExecute operation : com.scrum.calculator.sub.SubOperation
+2018-06-12 11:57:49 [main] INFO  SubOperation:47 - com.scrum.calculator.sub.SubOperation - Exécution soustaction
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Le résultat est : 5.0
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1 - Addition
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2 - Soustraction
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3 - Mutliplication
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4 - Division
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5 - Cosinus
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6 - Sinus
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7 - Tangente
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8 - Modulo
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9 - Pourcentage
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
+2018-06-12 11:57:49 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 11:57:49 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 11:57:53 [main] INFO  Application:211 - Application - doOperation : Historique
+2018-06-12 11:57:53 [main] DEBUG InvokeOperation:77 - com.scrum.calculator.core.InvokeOperation - toStringHistory()
+2018-06-12 11:57:53 [main] DEBUG SubOperation:59 - com.scrum.calculator.sub.SubOperation - toStringOperation()
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Op�ration n� 0 : 8.0 - 3.0 = 5.0
+
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1 - Addition
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2 - Soustraction
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3 - Mutliplication
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4 - Division
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5 - Cosinus
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6 - Sinus
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7 - Tangente
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8 - Modulo
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9 - Pourcentage
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
+2018-06-12 11:57:53 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 11:57:53 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 11:57:58 [main] INFO  Application:217 - Application - doOperation : ClearHistorique
+2018-06-12 11:57:58 [main] DEBUG InvokeOperation:97 - com.scrum.calculator.core.InvokeOperation - clearHistory()
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Historique effac�
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1 - Addition
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2 - Soustraction
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3 - Mutliplication
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4 - Division
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5 - Cosinus
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6 - Sinus
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7 - Tangente
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8 - Modulo
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9 - Pourcentage
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
+2018-06-12 11:57:58 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 11:57:58 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 11:58:01 [main] INFO  Application:211 - Application - doOperation : Historique
+2018-06-12 11:58:01 [main] DEBUG InvokeOperation:77 - com.scrum.calculator.core.InvokeOperation - toStringHistory()
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Aucun historique
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1 - Addition
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2 - Soustraction
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3 - Mutliplication
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4 - Division
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5 - Cosinus
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6 - Sinus
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7 - Tangente
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8 - Modulo
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9 - Pourcentage
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
+2018-06-12 11:58:01 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 11:58:01 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 12:05:29 [main] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:05:29 [main] INFO  Application:116 - Application started
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1  - Addition
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2  - Soustraction
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3  - Mutliplication
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4  - Division
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5  - Cosinus
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6  - Sinus
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7  - Tangente
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8  - Modulo
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9  - Pourcentage
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 -Effacer Historique
+2018-06-12 12:05:29 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 12:05:29 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 12:08:45 [main] INFO  Application:143 - Application finished
+2018-06-12 12:09:21 [main] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:09:21 [main] INFO  Application:116 - Application started
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1  - Addition
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2  - Soustraction
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3  - Mutliplication
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4  - Division
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5  - Cosinus
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6  - Sinus
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7  - Tangente
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8  - Modulo
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9  - Pourcentage
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 - Effacer Historique
+2018-06-12 12:09:21 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 12:09:21 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 12:09:29 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  AddOperation:47 - com.scrum.calculator.add.AddOperation - Exécution addition
+2018-06-12 12:09:29 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:09:29 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  InvokeOperation:55 - com.scrum.calculator.core.InvokeOperationstoreAndExecute operation : com.scrum.calculator.add.AddOperation
+2018-06-12 12:09:29 [Test worker] INFO  AddOperation:47 - com.scrum.calculator.add.AddOperation - Exécution addition
+2018-06-12 12:09:29 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:09:29 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:09:29 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:09:29 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:09:29 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:09:29 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:09:29 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:09:29 [Test worker] DEBUG DivideOperation:39 - com.scrum.calculator.divide.DivideOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  DivideOperation:47 - com.scrum.calculator.divide.DivideOperation - Exécution division
+2018-06-12 12:09:29 [Test worker] DEBUG DivideOperation:39 - com.scrum.calculator.divide.DivideOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  DivideOperation:47 - com.scrum.calculator.divide.DivideOperation - Exécution division
+2018-06-12 12:09:29 [Test worker] ERROR DivideOperation:53 - com.scrum.calculator.divide.DivideOperationjava.lang.ArithmeticException: Division by zero is impossible. Please change second value
+2018-06-12 12:09:29 [Test worker] DEBUG MultiplyOperation:39 - com.scrum.calculator.multiply.MultiplyOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  MultiplyOperation:47 - com.scrum.calculator.multiply.MultiplyOperation - Exécution multiplication
+2018-06-12 12:09:29 [Test worker] DEBUG CosOperation:24 - com.scrum.calculator.scient.CosOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  CosOperation:32 - com.scrum.calculator.scient.CosOperation - Ex�cution cosinus
+2018-06-12 12:09:29 [Test worker] DEBUG SinOperation:24 - com.scrum.calculator.scient.SinOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  SinOperation:32 - com.scrum.calculator.scient.SinOperation - Exécution sinus
+2018-06-12 12:09:29 [Test worker] DEBUG TanOperation:24 - com.scrum.calculator.scient.TanOperation - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  TanOperation:32 - com.scrum.calculator.scient.TanOperation - Exécution tangente
+2018-06-12 12:09:29 [Test worker] DEBUG SubOperation:39 - Constructor
+2018-06-12 12:09:29 [Test worker] INFO  SubOperation:47 - com.scrum.calculator.sub.SubOperation - Exécution soustaction
+2018-06-12 12:09:33 [main] INFO  Application:211 - Application - doOperation : Historique
+2018-06-12 12:09:33 [main] DEBUG InvokeOperation:77 - com.scrum.calculator.core.InvokeOperation - toStringHistory()
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Aucun historique
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : Veuillez choisir une op�ration
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 1  - Addition
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 2  - Soustraction
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 3  - Mutliplication
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 4  - Division
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 5  - Cosinus
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 6  - Sinus
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 7  - Tangente
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 8  - Modulo
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 9  - Pourcentage
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 10 - Historique
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 11 - Effacer Historique
+2018-06-12 12:09:33 [main] DEBUG UserInterface:53 - UserInterface - displayMessage : 12 - Quitter
+2018-06-12 12:09:33 [main] INFO  UserInterface:63 - UserInterface - asking user for int
+2018-06-12 12:09:41 [main] INFO  Application:143 - Application finished
+2018-06-12 12:15:26 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  AddOperation:47 - com.scrum.calculator.add.AddOperation - Exécution addition
+2018-06-12 12:15:26 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:15:26 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  InvokeOperation:55 - com.scrum.calculator.core.InvokeOperationstoreAndExecute operation : com.scrum.calculator.add.AddOperation
+2018-06-12 12:15:26 [Test worker] INFO  AddOperation:47 - com.scrum.calculator.add.AddOperation - Exécution addition
+2018-06-12 12:15:26 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:15:26 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:15:26 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:15:26 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:15:26 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:15:26 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:15:26 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:15:26 [Test worker] DEBUG DivideOperation:39 - com.scrum.calculator.divide.DivideOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  DivideOperation:47 - com.scrum.calculator.divide.DivideOperation - Exécution division
+2018-06-12 12:15:26 [Test worker] DEBUG DivideOperation:39 - com.scrum.calculator.divide.DivideOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  DivideOperation:47 - com.scrum.calculator.divide.DivideOperation - Exécution division
+2018-06-12 12:15:26 [Test worker] ERROR DivideOperation:53 - com.scrum.calculator.divide.DivideOperationjava.lang.ArithmeticException: Division by zero is impossible. Please change second value
+2018-06-12 12:15:26 [Test worker] DEBUG MultiplyOperation:39 - com.scrum.calculator.multiply.MultiplyOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  MultiplyOperation:47 - com.scrum.calculator.multiply.MultiplyOperation - Exécution multiplication
+2018-06-12 12:15:26 [Test worker] DEBUG CosOperation:24 - com.scrum.calculator.scient.CosOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  CosOperation:32 - com.scrum.calculator.scient.CosOperation - Ex�cution cosinus
+2018-06-12 12:15:26 [Test worker] DEBUG SinOperation:24 - com.scrum.calculator.scient.SinOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  SinOperation:32 - com.scrum.calculator.scient.SinOperation - Exécution sinus
+2018-06-12 12:15:26 [Test worker] DEBUG TanOperation:24 - com.scrum.calculator.scient.TanOperation - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  TanOperation:32 - com.scrum.calculator.scient.TanOperation - Exécution tangente
+2018-06-12 12:15:26 [Test worker] DEBUG SubOperation:39 - Constructor
+2018-06-12 12:15:26 [Test worker] INFO  SubOperation:47 - com.scrum.calculator.sub.SubOperation - Exécution soustaction
+2018-06-12 12:18:04 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  AddOperation:47 - com.scrum.calculator.add.AddOperation - Exécution addition
+2018-06-12 12:18:04 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:18:04 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  InvokeOperation:55 - com.scrum.calculator.core.InvokeOperationstoreAndExecute operation : com.scrum.calculator.add.AddOperation
+2018-06-12 12:18:04 [Test worker] INFO  AddOperation:47 - com.scrum.calculator.add.AddOperation - Exécution addition
+2018-06-12 12:18:04 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:18:04 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:18:04 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:18:04 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:18:04 [Test worker] DEBUG AddOperation:39 - com.scrum.calculator.add.AddOperation - Constructor
+2018-06-12 12:18:04 [Test worker] DEBUG InvokeOperation:45 - com.scrum.calculator.core.InvokeOperation - Constructor
+2018-06-12 12:18:04 [Test worker] DEBUG InvokeOperation:68 - com.scrum.calculator.core.InvokeOperation - getHistory()
+2018-06-12 12:18:04 [Test worker] DEBUG DivideOperation:39 - com.scrum.calculator.divide.DivideOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  DivideOperation:47 - com.scrum.calculator.divide.DivideOperation - Exécution division
+2018-06-12 12:18:04 [Test worker] DEBUG DivideOperation:39 - com.scrum.calculator.divide.DivideOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  DivideOperation:47 - com.scrum.calculator.divide.DivideOperation - Exécution division
+2018-06-12 12:18:04 [Test worker] ERROR DivideOperation:53 - com.scrum.calculator.divide.DivideOperationjava.lang.ArithmeticException: Division by zero is impossible. Please change second value
+2018-06-12 12:18:04 [Test worker] DEBUG MultiplyOperation:39 - com.scrum.calculator.multiply.MultiplyOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  MultiplyOperation:47 - com.scrum.calculator.multiply.MultiplyOperation - Exécution multiplication
+2018-06-12 12:18:04 [Test worker] DEBUG CosOperation:24 - com.scrum.calculator.scient.CosOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  CosOperation:32 - com.scrum.calculator.scient.CosOperation - Ex�cution cosinus
+2018-06-12 12:18:04 [Test worker] DEBUG SinOperation:24 - com.scrum.calculator.scient.SinOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  SinOperation:32 - com.scrum.calculator.scient.SinOperation - Exécution sinus
+2018-06-12 12:18:04 [Test worker] DEBUG TanOperation:24 - com.scrum.calculator.scient.TanOperation - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  TanOperation:32 - com.scrum.calculator.scient.TanOperation - Exécution tangente
+2018-06-12 12:18:04 [Test worker] DEBUG SubOperation:39 - Constructor
+2018-06-12 12:18:04 [Test worker] INFO  SubOperation:47 - com.scrum.calculator.sub.SubOperation - Exécution soustaction

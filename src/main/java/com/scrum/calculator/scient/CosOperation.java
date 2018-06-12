@@ -29,7 +29,7 @@ public class CosOperation extends AbstractOperation {
      */
     @Override
     public final void execute() {
-        LOGGER.info(this.getClass().getName() + " - ExÃ©cution cosinus");
+        LOGGER.info(this.getClass().getName() + " - Exécution cosinus");
         double div = 100.0;
         double result = Math.cos(Math.toRadians(
         this.getListNumber().get(0)));
