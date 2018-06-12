@@ -35,9 +35,6 @@
     </Appenders>
     <Loggers>
         <Root level="debug">
-            <AppenderRef ref="Console" />
-        </Root>
-        <Root level="info">
             <AppenderRef ref="RollingFile" />
         </Root>
     </Loggers>

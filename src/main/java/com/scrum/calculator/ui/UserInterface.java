@@ -50,7 +50,7 @@ public final class UserInterface {
      * @param message to display.
      */
     public static void displayMessage(final String message) {
-        LOGGER.info("UserInterface - displayMessage : " + message);
+        LOGGER.debug("UserInterface - displayMessage : " + message);
         System.out.println(message);
     }
 

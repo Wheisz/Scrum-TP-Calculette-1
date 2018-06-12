@@ -106,6 +106,8 @@ public final class Application {
 
         while (userChoice != LEAVE_NUMBER) {
             // User choice
+            LOGGER.info("Application - Display menu");
+
             UserInterface.displayMessage("Veuillez choisir une op�ration");
             UserInterface.displayMessage(ADDNUMBER + " - Addition");
             UserInterface.displayMessage(SUBNUMBER + " - Soustraction");

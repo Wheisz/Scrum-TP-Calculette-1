@@ -36,8 +36,7 @@ public class SubOperation extends AbstractOperation {
      */
     public SubOperation() {
         super();
-        super.setNumberOfParams(1);
-        LOGGER.debug(this.getClass().getName() + " - Constructor");
+        LOGGER.debug("Constructor");
     }
 
     /**
