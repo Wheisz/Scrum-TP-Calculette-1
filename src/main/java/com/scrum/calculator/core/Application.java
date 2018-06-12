@@ -92,7 +92,7 @@ public final class Application {
     /**
      * Value for manual fonction.
      */
-    private static final int MANUALFONCTION = 10;    
+    private static final int MANUALFONCTION = 10;
     /**
      * Value for history.
      */
@@ -114,11 +114,9 @@ public final class Application {
     public static void main(final String[] args) {
 
         LOGGER.info("Application started");
-
         int userChoice = 0;
-        final int LEAVE_NUMBER = LEAVENUMBER;
 
-        while (userChoice != LEAVE_NUMBER) {
+        while (userChoice != LEAVENUMBER) {
             // User choice
             UserInterface.displayMessage("Veuillez choisir une op�ration");
             UserInterface.displayMessage(ADDNUMBER + " - Addition");
@@ -135,7 +133,7 @@ public final class Application {
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
             userChoice = UserInterface.getIntFromUser();
-            if (userChoice != LEAVE_NUMBER) {
+            if (userChoice != LEAVENUMBER) {
                 doOperation(userChoice);
             }
         }
@@ -210,7 +208,7 @@ public final class Application {
         case MANUALFONCTION:
             LOGGER.info("Application - doOperation : Free operation");
             operation = new PercentOperation();
-            break;            
+            break;
             
         // Historique
         case HISTORYNUMBER:

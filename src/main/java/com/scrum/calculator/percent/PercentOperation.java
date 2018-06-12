@@ -11,6 +11,11 @@ import org.apache.logging.log4j.Logger;
 public class PercentOperation  extends AbstractOperation {
 
     /**
+     * Value of percentage.
+     */
+    private static final int PERCENTAGE = 100;
+
+    /**
      * Logger.
      */
     private static final Logger LOGGER = LogManager.getLogger();
@@ -29,9 +34,9 @@ public class PercentOperation  extends AbstractOperation {
      */
     @Override
     public final void execute() {
-        LOGGER.info(this.getClass().getName() + " - Exécution soustaction");
+        LOGGER.info(this.getClass().getName() + " - Exécution soustraction");
         float result;
-        result = this.getListNumber().get(0) / 100;
+        result = this.getListNumber().get(0) / PERCENTAGE;
         this.setResult(result);
     }
 

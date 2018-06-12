@@ -63,7 +63,7 @@ public final class UserInterface {
             LOGGER.info("UserInterface - asking user for int");
             return Integer.parseInt(reader.nextLine());
         } catch (NumberFormatException e) {
-            final String errorMessage =
+            String errorMessage =
                     "Veuillez saisir une valeur valide : un entier";
             LOGGER.error("UserInterface - " + errorMessage, e);
             UserInterface.displayMessage(errorMessage);
@@ -80,13 +80,13 @@ public final class UserInterface {
             LOGGER.info("UserInterface - asking user for float");
             return Float.parseFloat(reader.nextLine());
         } catch (NumberFormatException e) {
-            final String errorMessage =
+            String errorMessage =
                     "Veuillez saisir une valeur valide : un float";
             LOGGER.error("UserInterface - " + errorMessage, e);
             UserInterface.displayMessage(errorMessage);
             return getFloatFromUser();
         }
-    }   
+    }
 
     /**
      * Ask the user to input a string.
@@ -94,7 +94,6 @@ public final class UserInterface {
      */
     public static String getStringFromUser(){
         LOGGER.info("UserInerface - asking user for string");
-        
         return reader.nextLine();
     }
 }
