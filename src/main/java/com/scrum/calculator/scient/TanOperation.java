@@ -33,10 +33,10 @@ public class TanOperation extends AbstractOperation {
      * Execute Tan operation.
      */
     @Override
-    public final void execute() throws ArithmeticException{
+    public final void execute() throws ArithmeticException {
         LOGGER.info(this.getClass().getName() + " - Exécution tangente");
         double result = Math.tan(Math.toRadians(
-        this.getListNumber().get(0)));
+            this.getListNumber().get(0)));
         this.setResult((float) (Math.round(result * DIV) / DIV));
     }
 

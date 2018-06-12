@@ -209,7 +209,7 @@ public final class Application {
             LOGGER.info("Application - doOperation : Free operation");
             operation = new PercentOperation();
             break;
-            
+
         // Historique
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");

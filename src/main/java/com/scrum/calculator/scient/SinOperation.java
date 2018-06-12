@@ -36,7 +36,7 @@ public class SinOperation extends AbstractOperation {
     public final void execute() {
         LOGGER.info(this.getClass().getName() + " - Exécution sinus");
         double result = Math.sin(Math.toRadians(
-        this.getListNumber().get(0)));
+            this.getListNumber().get(0)));
         this.setResult((float) (Math.round(result * DIV) / DIV));
     }
 
