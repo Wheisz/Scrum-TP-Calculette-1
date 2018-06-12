@@ -14,7 +14,30 @@
  * limitations under the License.
  */
 
-/**
- * Package Addition.
- */
-package com.scrum.calculator.add;
+package com.scrum.calculator.ui;
+
+public class MockUserInterface implements UserInterface {
+
+    private boolean isDicplay;
+
+    @Override
+    public void displayMessage(String message) {
+        this.isDicplay = true;
+    }
+
+    @Override
+    public int getIntFromUser() {
+        return 10;
+    }
+
+    @Override
+    public float getFloatFromUser() {
+        return 20.2f;
+    }
+
+    @Override
+    public String getStringFromUser() {
+        return "10 + 10";
+    }
+
+}

@@ -14,7 +14,7 @@
  * limitations under the License.
  */
 
-/*******************************************************
- * Core package of calculator application.
-*********************************************************/
-package com.scrum.calculator.percent;
+/**
+ * Package Addition.
+ */
+package com.scrum.calculator.operations;

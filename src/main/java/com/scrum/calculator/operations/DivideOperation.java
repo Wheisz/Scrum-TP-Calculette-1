@@ -14,17 +14,17 @@
  * limitations under the License.
  */
 
-package com.scrum.calculator.add;
+package com.scrum.calculator.operations;
 
 import com.scrum.calculator.core.AbstractOperation;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 
 /**
- * Class Addition.
+ * Class Divide operation.
  * @author tsupio
  */
-public class AddOperation extends AbstractOperation {
+public class DivideOperation extends AbstractOperation {
 
     /**
      * Logger.
@@ -34,33 +34,37 @@ public class AddOperation extends AbstractOperation {
     /**
      * Constructor.
      */
-    public AddOperation() {
+    public DivideOperation() {
         super();
         LOGGER.debug(this.getClass().getName() + " - Constructor");
     }
 
     /**
-     * Execute Add operation.
+     * Execute divide operation.
      */
     @Override
     public final void execute() throws ArithmeticException {
-        LOGGER.info(this.getClass().getName()
-                + " - Exécution addition");
-        float result = 0;
-        for (int i = 0; i < super.getNumberOfParams(); i++) {
-            result += this.getListNumber().get(i);
+        LOGGER.info(this.getClass().getName() + " - Exécution division");
+        float result;
+        if (this.getListNumber().get(1) == 0) {
+            ArithmeticException arithEx = new ArithmeticException(
+                    "Division by zero is impossible. "
+                    + "Please change second value");
+            LOGGER.error(this.getClass().getName() + arithEx);
+            throw arithEx;
         }
+        result = getListNumber().get(0) / getListNumber().get(1);
         this.setResult(result);
     }
 
     /**
-     * ToString of addition.
-     * @return string of an addition
+     * ToString of division.
+     * @return string of a division
      */
     @Override
     public final String toStringOperation() {
         LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
-        return this.getListNumber().get(0) + " + " + this.getListNumber().get(1)
+        return this.getListNumber().get(0) + " / " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }
 }

@@ -14,55 +14,42 @@
  * limitations under the License.
  */
 
-package com.scrum.calculator.divide;
+package com.scrum.calculator.testoperations;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.scrum.calculator.operations.AddOperation;
+
 import java.util.ArrayList;
 
-public class DivideOperationTest {
+public class AddOperationTest {
     @Before
     // S'exécute AVANT chaque test
     public void setup(){
-        System.out.println("Start DivideOperationTest");
+        System.out.println("Start AddOperationTest");
     }
 
     @Test
     public void testExecute(){
-        float i = 8;
-        float j = 2;
+        float i = 2;
+        float j = 3;
         ArrayList<Float> listNumber = new ArrayList<Float>();
         listNumber.add(i);
         listNumber.add(j);
 
-        DivideOperation divide = new DivideOperation();
-        divide.setListNumber(listNumber);
-        divide.execute();
-        Assert.assertEquals("Divide not good",
-                4, divide.getResult(), 0.0);
-    }
-
-    @Test (expected = ArithmeticException.class)
-    public void testExecuteWithZero() {
-        float i = 8;
-        float j = 0;
-        ArrayList<Float> listNumber = new ArrayList<Float>();
-        listNumber.add(i);
-        listNumber.add(j);
-
-        DivideOperation divide = new DivideOperation();
-        divide.setListNumber(listNumber);
-        divide.execute();
-        Assert.assertEquals("Divide not good",
-                4, divide.getResult(), 0.0);
+        AddOperation add = new AddOperation();
+        add.setListNumber(listNumber);
+        add.execute();
+        Assert.assertEquals("Add not good",
+                5, add.getResult(), 0.0);
     }
 
     @After
     // S'exécute APRES chaque test
     public void teardown(){
-        System.out.println("End DivideOperationTest");
+        System.out.println("End AddOperationTest");
     }
 }

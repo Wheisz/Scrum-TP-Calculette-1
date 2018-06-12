@@ -14,20 +14,23 @@
  * limitations under the License.
  */
 
-package com.scrum.calculator.multiply;
+package com.scrum.calculator.testoperations;
 
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.scrum.calculator.operations.AddOperation;
+import com.scrum.calculator.operations.SubOperation;
+
 import java.util.ArrayList;
 
-public class MultiplyOperationTest {
+public class SubOperationTest {
     @Before
     // S'exécute AVANT chaque test
     public void setup(){
-        System.out.println("Start MultiplyOperationTest");
+        System.out.println("Start SubOperationTest");
     }
 
     @Test
@@ -38,16 +41,16 @@ public class MultiplyOperationTest {
         listNumber.add(i);
         listNumber.add(j);
 
-        MultiplyOperation multiply = new MultiplyOperation();
-        multiply.setListNumber(listNumber);
-        multiply.execute();
-        Assert.assertEquals("Multiply not good",
-                6, multiply.getResult(), 0.0);
+        SubOperation sub = new SubOperation();
+        sub.setListNumber(listNumber);
+        sub.execute();
+        Assert.assertEquals("Add not good",
+                -1, sub.getResult(), 0.0);
     }
 
     @After
     // S'exécute APRES chaque test
     public void teardown(){
-        System.out.println("End MultiplyOperationTest");
+        System.out.println("End SubOperationTest");
     }
 }

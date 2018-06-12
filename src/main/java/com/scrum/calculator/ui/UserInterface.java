@@ -16,98 +16,34 @@
 
 package com.scrum.calculator.ui;
 
-import org.apache.logging.log4j.LogManager;
-import org.apache.logging.log4j.Logger;
-
-import java.util.Scanner;
-
 /**
  * User interface class.
  * @author Willy
  *
  */
-public final class UserInterface {
+public interface UserInterface {
 
     /**
-     * Logger.
+     * Display message.
+     * @param message the displayed message.
      */
-    private static final Logger LOGGER = LogManager.getLogger();
+    void displayMessage(final String message);
 
     /**
-     * Scanner to get user values.
+     * Get Integer.
+     * @return interger
      */
-    private static Scanner reader = new Scanner(System.in);
+    int getIntFromUser();
 
     /**
-     * Private class.
+     * get float.
+     * @return returned float
      */
-    private UserInterface() {
-        LOGGER.debug(this.getClass().getName() + " - Constructor");
-    }
+    float getFloatFromUser();
 
     /**
-     * Display a message to the user.
-     * @param message to display.
+     * Return string.
+     * @return String from user
      */
-    public static void displayMessage(final String message) {
-        LOGGER.debug(UserInterface.class.getName()
-                + " - displayMessage : " + message);
-        System.out.println(message);
-    }
-
-    /**
-     * Ask the user to choose a number.
-     * @return User's number
-     */
-    public static int getIntFromUser() {
-        try {
-            LOGGER.info(UserInterface.class.getName()
-                    + " - asking user for int");
-
-            return Integer.parseInt(reader.nextLine());
-        } catch (NumberFormatException e) {
-            String errorMessage =
-                    "Veuillez saisir une valeur valide : un entier";
-
-            LOGGER.error(UserInterface.class.getName()
-                    + " - " + errorMessage, e);
-
-            UserInterface.displayMessage(errorMessage);
-            return getIntFromUser();
-        }
-    }
-
-    /**
-     * Ask the user to choose a float number.
-     * @return Float number of the user
-     */
-    public static float getFloatFromUser() {
-        try {
-            LOGGER.info(UserInterface.class.getName()
-                    + "  - asking user for float");
-
-            return Float.parseFloat(reader.nextLine());
-        } catch (NumberFormatException e) {
-            String errorMessage =
-                    "Veuillez saisir une valeur valide : un float";
-
-            LOGGER.error(UserInterface.class.getName()
-                    + " - " + errorMessage, e);
-
-            UserInterface.displayMessage(errorMessage);
-            return getFloatFromUser();
-        }
-    }
-
-    /**
-     * Ask the user to input a string.
-     * @return User string
-     */
-    public static String getStringFromUser() {
-        LOGGER.info(UserInterface.class.getName()
-                + " - asking user for string");
-        displayMessage("Veuillez saisir une chaine de calcul valide :");
-
-        return reader.nextLine();
-    }
+    String getStringFromUser();
 }

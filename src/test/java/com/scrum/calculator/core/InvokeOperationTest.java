@@ -16,11 +16,12 @@
 
 package com.scrum.calculator.core;
 
-import com.scrum.calculator.add.AddOperation;
 import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
+
+import com.scrum.calculator.operations.AddOperation;
 
 import java.util.ArrayList;
 
