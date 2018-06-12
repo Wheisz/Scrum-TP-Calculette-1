@@ -94,9 +94,13 @@ public final class Application {
      */
     private static final int HISTORYNUMBER = 10;
     /**
+     * Value for clear history.
+     */
+    private static final int CLEARHISTORYNUMBER = 11;
+    /**
      * Value for leaving application.
      */
-    private static final int LEAVENUMBER = 11;
+    private static final int LEAVENUMBER = 12;
 
     /**
      * Constructor.
@@ -125,8 +129,9 @@ public final class Application {
             UserInterface.displayMessage(SINNUMBER + " - Sinus");
             UserInterface.displayMessage(TANNUMBER + " - Tangente");
             UserInterface.displayMessage(MODNUMBER + " - Modulo");
-            UserInterface.displayMessage(PERCENTNUMBER + " - Percentage");
+            UserInterface.displayMessage(PERCENTNUMBER + " - Pourcentage");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
+            UserInterface.displayMessage(CLEARHISTORYNUMBER + " -Effacer Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
 
             userChoice = UserInterface.getIntFromUser();
@@ -205,6 +210,12 @@ public final class Application {
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");
             UserInterface.displayMessage(operations.toStringHistory());
+            break;
+            
+        // Effacer Historique
+        case CLEARHISTORYNUMBER:
+            LOGGER.info("Application - doOperation : ClearHistorique");
+            UserInterface.displayMessage(operations.clearHistory());
             break;
 
         default:

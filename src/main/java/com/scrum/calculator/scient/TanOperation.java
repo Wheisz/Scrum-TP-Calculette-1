@@ -43,7 +43,7 @@ public class TanOperation extends AbstractOperation {
     @Override
     public final String toStringOperation() {
         LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
-        return " Tan(" + this.getListNumber().get(0) + ")"
+        return "Tan(" + this.getListNumber().get(0) + ")"
                 + " = " + this.getResult();
     }
 }
