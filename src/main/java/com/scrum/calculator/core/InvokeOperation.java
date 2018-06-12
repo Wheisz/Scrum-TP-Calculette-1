@@ -16,6 +16,9 @@
 
 package com.scrum.calculator.core;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
+
 import java.util.ArrayList;
 import java.util.List;
 
@@ -26,6 +29,11 @@ import java.util.List;
 public class InvokeOperation {
 
     /**
+     * Logger.
+     */
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    /**
      * List of invoked operation to keep an history.
      */
     private final List<AbstractOperation> history;
@@ -34,6 +42,7 @@ public class InvokeOperation {
      * Constructor.
      */
     public InvokeOperation() {
+        LOGGER.debug(this.getClass().getName() + " - Constructor");
         this.history = new ArrayList<>();
     }
 
@@ -42,6 +51,8 @@ public class InvokeOperation {
      * @param operation Operation to store and execute
      */
     public final void storeAndExecute(final AbstractOperation operation) {
+        LOGGER.info("storeAndExecute operation - "
+                + operation.getClass().getName());
         this.history.add(operation);
         operation.execute();
     }
@@ -51,6 +62,7 @@ public class InvokeOperation {
      * @return history of operations
      */
     public final List<AbstractOperation> getHistory() {
+        LOGGER.debug(this.getClass().getName() + " - getHistory()");
         return this.history;
     }
 
@@ -59,6 +71,7 @@ public class InvokeOperation {
      * @return the string for an history
      */
     public final String toStringHistory() {
+        LOGGER.debug(this.getClass().getName() + " - toStringHistory()");
         String result = "";
         for (int i = 0; i < this.history.size(); i++) {
             result += "Opération n° " + i + " : "

@@ -17,6 +17,8 @@
 package com.scrum.calculator.divide;
 
 import com.scrum.calculator.core.AbstractOperation;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Class Divide operation.
@@ -25,15 +27,31 @@ import com.scrum.calculator.core.AbstractOperation;
 public class DivideOperation extends AbstractOperation {
 
     /**
+     * Logger.
+     */
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    /**
+     * Constructor.
+     */
+    public DivideOperation() {
+        super();
+        LOGGER.debug(this.getClass().getName() + " - Constructor");
+    }
+
+    /**
      * Execute divide operation.
      */
     @Override
     public final void execute() throws ArithmeticException {
+        LOGGER.info(this.getClass().getName() + " - Exécution division");
         float result;
         if (this.getListNumber().get(1) == 0) {
-            throw new ArithmeticException("Division by zero is impossible. "
+            ArithmeticException arithEx = new ArithmeticException(
+                    "Division by zero is impossible. "
                     + "Please change second value");
-
+            LOGGER.error(this.getClass().getName() + arithEx);
+            throw arithEx;
         }
         result = getListNumber().get(0) / getListNumber().get(1);
         this.setResult(result);
@@ -45,6 +63,7 @@ public class DivideOperation extends AbstractOperation {
      */
     @Override
     public final String toStringOperation() {
+        LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
         return this.getListNumber().get(0) + " / " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }

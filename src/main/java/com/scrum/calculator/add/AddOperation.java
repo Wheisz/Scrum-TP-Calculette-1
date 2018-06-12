@@ -17,6 +17,8 @@
 package com.scrum.calculator.add;
 
 import com.scrum.calculator.core.AbstractOperation;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 
 /**
  * Class Addition.
@@ -25,16 +27,29 @@ import com.scrum.calculator.core.AbstractOperation;
 public class AddOperation extends AbstractOperation {
 
     /**
+     * Logger.
+     */
+    private static final Logger LOGGER = LogManager.getLogger();
+
+    /**
+     * Constructor.
+     */
+    public AddOperation() {
+        super();
+        LOGGER.debug(this.getClass().getName() + " - Constructor");
+    }
+
+    /**
      * Execute Add operation.
      */
     @Override
     public final void execute() throws ArithmeticException {
+        LOGGER.info(this.getClass().getName()
+                + " - Exécution addition");
         float result = 0;
-
         for (int i = 0; i < super.getNumberOfParams(); i++) {
             result += this.getListNumber().get(i);
         }
-
         this.setResult(result);
     }
 
@@ -44,6 +59,7 @@ public class AddOperation extends AbstractOperation {
      */
     @Override
     public final String toStringOperation() {
+        LOGGER.debug(this.getClass().getName() + " - toStringOperation()");
         return this.getListNumber().get(0) + " + " + this.getListNumber().get(1)
                 + " = " + this.getResult();
     }
