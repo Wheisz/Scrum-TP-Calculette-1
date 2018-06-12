@@ -90,13 +90,17 @@ public final class Application {
      */
     private static final int PERCENTNUMBER = 9;
     /**
+     * Value for manual fonction.
+     */
+    private static final int MANUALFONCTION = 10;    
+    /**
      * Value for history.
      */
-    private static final int HISTORYNUMBER = 10;
+    private static final int HISTORYNUMBER = 11;
     /**
      * Value for leaving application.
      */
-    private static final int LEAVENUMBER = 11;
+    private static final int LEAVENUMBER = 12;
 
     /**
      * Constructor.
@@ -125,6 +129,7 @@ public final class Application {
             UserInterface.displayMessage(SINNUMBER + " - Sinus");
             UserInterface.displayMessage(TANNUMBER + " - Tangente");
             UserInterface.displayMessage(MODNUMBER + " - Modulo");
+            UserInterface.displayMessage(MANUALFONCTION + " - Calcul libre");
             UserInterface.displayMessage(PERCENTNUMBER + " - Percentage");
             UserInterface.displayMessage(HISTORYNUMBER + " - Historique");
             UserInterface.displayMessage(LEAVENUMBER + " - Quitter");
@@ -201,6 +206,12 @@ public final class Application {
             operation = new PercentOperation();
             break;
 
+        // Percent
+        case MANUALFONCTION:
+            LOGGER.info("Application - doOperation : Free operation");
+            operation = new PercentOperation();
+            break;            
+            
         // Historique
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");
