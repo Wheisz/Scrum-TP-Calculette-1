@@ -65,8 +65,8 @@ public class FreeOperation extends AbstractOperation {
         LOGGER.info(this.getClass().getName()
                 + " - Exécution free operation");
 
-        super.setResult(Float.parseFloat
-                (Double.toString(expression.calculate())));
+        super.setResult(Float.parseFloat(
+                Double.toString(expression.calculate())));
     }
 
     /**

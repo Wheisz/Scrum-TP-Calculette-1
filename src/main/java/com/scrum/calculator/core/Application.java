@@ -215,12 +215,12 @@ public final class Application {
             // Percent
         case MANUALFONCTION:
             LOGGER.info("Application - doOperation : Free operation");
-            
+
             while (operation == null) {
                 operation = doSetStringOperation();
             }
             break;
-                                   
+
         // Historique
         case HISTORYNUMBER:
             LOGGER.info("Application - doOperation : Historique");
@@ -288,7 +288,6 @@ public final class Application {
             UserInterface.displayMessage(e.getMessage());
             return null;
         }
-
 
         return (AbstractOperation) freeOpe;
     }
