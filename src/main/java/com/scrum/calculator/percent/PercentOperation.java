@@ -31,9 +31,7 @@ public class PercentOperation  extends AbstractOperation {
      */
     @Override
     public final String toStringOperation() {
-        return this.getListNumber().get(0) + " Mod "
-             + this.getListNumber().get(1)
-               + " = " + this.getResult();
+        return this.getListNumber().get(0) + " Mod = " + this.getResult();
     }
 }
 
